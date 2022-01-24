@@ -1,0 +1,357 @@
+// fonts used
+// GB Garamoud
+// Georama
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;700&family=Georama:ital,wght@0,400;0,500;0,700;1,900&display=swap');
+@import 'themes';
+body {
+    font-family: 'Georama', sans-serif;
+    font-size: 20px;
+    font-style: normal;
+    padding: 0;
+    margin: 0;
+    overflow-x: hidden;
+}
+
+section {
+    width: 80%;
+    margin: auto;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    padding: 0;
+    margin: 0;
+}
+
+p {
+    padding: 0;
+    margin: 0;
+}
+
+h1 {
+    font-size: 50px;
+    font-weight: bold;
+}
+
+h2 {
+    font-size: 30px;
+    font-weight: bold;
+}
+
+h4 {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+h5 {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+h6 {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+i {
+    font-style: normal;
+}
+
+a {
+    color: #fff;
+    text-decoration: none;
+}
+
+a:hover {
+    color: $accent;
+}
+
+// common
+.section-title {
+    margin-bottom: 30px;
+    color: $main;
+    text-align: center;
+}
+
+// Homepage
+.navbar {
+    background-color: $main;
+    height: 80px;
+    .navbar-info {
+        display: flex;
+        justify-content: space-between;
+        margin: auto;
+        width: 80%;
+        .title {
+            font-family: "EB Garamond", serif;
+            color: $primary;
+            h1 {
+                font-size: 40px;
+                color: $accent;
+                i {
+                    color: $accent2;
+                }
+            }
+            h3 {
+                font-size: 20px;
+            }
+        }
+        .navbar-links {
+            display: flex;
+            a {
+                margin: auto 24px;
+                font-size: 20px;
+            }
+        }
+    }
+}
+
+.button {
+    padding: 10px 8px;
+    border: 2px solid $primary;
+    box-sizing: border-box;
+    border-radius: 15px;
+}
+
+.button:hover {
+    background-color: $main-dark;
+    color: $accent;
+    border: 2px solid $accent;
+    box-shadow: 4px 4px 8px 0 rgba($color: $accent, $alpha: 0.4);
+}
+
+// Home title
+#home-title {
+    position: relative;
+    background-image: url(../images/joanna-kosinska-7ACuHoezUYk-unsplash.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 800px;
+    width: 100%;
+    .home-title-info {
+        width: 80%;
+        height: 100%;
+        margin: auto;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+    }
+    .circle-div {
+        animation: MoveUpDown 5s linear infinite;
+        position: absolute;
+        top: 150px;
+        left: 50px;
+        $size: 530px;
+        --p: 15px;
+        border-radius: 50%;
+        border: 1px rgba(#fff, 0.2) solid;
+        background-color: rgba(#fff, 0.02);
+        box-shadow: 0 4px 30px rgba(#fff, 0.1);
+        backdrop-filter: blur(3.0px);
+        -wwebkit-backdrop-filter: blur(3.0px);
+        height: $size;
+        width: $size;
+        color: $primary;
+        // align-items: center;
+        // text-align: center;
+        // border-style: dotted;
+    }
+    @keyframes MoveUpDown {
+        0%,
+        100% {
+            transform: translateY(0);
+        }
+        50% {
+            transform: translateY(-100px);
+        }
+    }
+    .circle-div i,
+    .circle-div::before {
+        content: '';
+        float: left;
+        height: 100%;
+        width: 50%;
+        shape-outside: radial-gradient(farthest-side at right, transparent calc(100% - var(--p)), #fff 0);
+    }
+    .circle-div i {
+        float: right;
+        shape-outside: radial-gradient(farthest-side at left, transparent calc(100% - var(--p)), #fff 0);
+    }
+    .home-title-offer {
+        font-size: 50px;
+        color: $accent;
+    }
+}
+
+#popular-courses {
+    margin: 100px auto;
+    // margin-bottom: 50px;
+    h1 {
+        margin-bottom: 30px;
+        color: $main;
+        text-align: center;
+    }
+    .courses {
+        // width: 100%;
+        display: grid;
+        grid-template-columns: auto auto auto auto;
+        justify-content: space-between;
+        // grid-template-rows: auto auto;
+        gap: 4%;
+        .courses-box {
+            box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.2), 0px -4px 4px rgba(0, 0, 0, 0.1);
+            border-radius: 15px;
+            padding: 16px;
+            // box-sizing: border-box;
+            .img {
+                height: 200px;
+                border-radius: 10px 10px 0 0;
+                // width: 280px;
+                img {
+                    border-radius: 10px 10px 0 0;
+                    height: 200px;
+                    width: 100%;
+                    object-fit: cover;
+                }
+                margin-bottom: 25px;
+            }
+            .info {
+                margin-top: 10px;
+                table {
+                    width: 100%;
+                    font-size: 16px;
+                    td:first-child {
+                        font-weight: bold;
+                    }
+                }
+            }
+            .join {
+                display: flex;
+                justify-content: space-between;
+                align-items: baseline;
+                margin-top: 40px;
+                h6 {
+                    color: $main-light;
+                }
+                a {
+                    background-color: $main-light;
+                    border-radius: 10px;
+                    padding: 5px 20px;
+                    color: $accent;
+                    font-weight: bolder;
+                }
+            }
+        }
+    }
+    @media screen and (max-width: 1400px) {
+        .courses {
+            grid-template-columns: auto auto auto;
+            gap: 5%;
+        }
+    }
+}
+
+#contact {
+    .contact {
+        display: flex;
+        justify-content: space-between;
+        .map {
+            width: 50%;
+            border-radius: 15px;
+            border: $main-light 3px solid;
+            iframe {
+                width: 100%;
+                height: 100%;
+                border-radius: 15px;
+            }
+            .mapouter {
+                /* position: relative; */
+                /* text-align: right; */
+                height: 100%;
+                // width: 600px;
+            }
+            .gmap_canvas {
+                overflow: hidden;
+                background: none!important;
+                height: 100%;
+                // width: 600px;
+            }
+        }
+        .contact-types {
+            width: 45%;
+            .contact-form {
+                background-color: $main-light;
+                border-radius: 15px;
+                padding: 20px 15px 40px;
+                h2 {
+                    color: $primary;
+                    margin-bottom: 20px;
+                }
+                form {
+                    display: flex;
+                    flex-direction: column;
+                    row-gap: 15px;
+                    input {
+                        padding: 5px 16px;
+                        font-size: 20px;
+                        border-radius: 5px;
+                        border: none;
+                        outline: none;
+                        font-family: inherit;
+                    }
+                    input::placeholder {
+                        color: #bababa;
+                    }
+                    textarea {
+                        font-family: inherit;
+                        border: none;
+                        padding: 5px 16px;
+                        font-size: 20px;
+                        border-radius: 5px;
+                        outline: none;
+                    }
+                    textarea::placeholder {
+                        color: #bababa;
+                    }
+                    input[type=submit] {
+                        @extend h5;
+                        border-radius: 15px;
+                        width: fit-content;
+                        color: $primary;
+                        border: 3px solid $primary;
+                        background-color: transparent;
+                        padding: 15px 40px;
+                        transition: box-shadow 500ms, color 500ms, border 500ms;
+                        transition-timing-function: ease;
+                        box-shadow: none;
+                    }
+                    input[type=submit]:hover {
+                        border: $accent 3px solid;
+                        color: $accent;
+                        box-shadow: 0px 4px 4px rgba($accent, 0.2), 0px -4px 4px rgba($accent, 0.1);
+                    }
+                }
+            }
+            .contact-info {
+                margin-top: 30px;
+                padding: 20px 20px;
+                color: $main;
+                border: solid 3px $main-light;
+                border-radius: 15px;
+                h2 {
+                    color: $main-light;
+                    margin-bottom: 24px;
+                }
+                .contact-details {
+                    margin-top: 20px;
+                }
+            }
+        }
+    }
+}
+
+@import 'animation';
