@@ -127,7 +127,7 @@ a:hover {
 // Home title
 #home-title {
     position: relative;
-    background-image: url(../images/joanna-kosinska-7ACuHoezUYk-unsplash.jpg);
+    background-image: url(./../../../../../Users/Downloads/Security-Intelligence-Education.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     height: 800px;
@@ -139,6 +139,34 @@ a:hover {
         display: flex;
         align-items: center;
         justify-content: flex-end;
+    }
+    .square-div {
+        animation: MoveUpDown 5s linear infinite;
+        position: absolute;
+        top: 150px;
+        left: 100px;
+        $size: 530px;
+        --p: 30px;
+        padding: var(--p);
+        // border-radius: 50%;
+        border: 1px rgba($accent, 0.6) solid;
+        background-color: rgba(#fff, 0.02);
+        box-shadow: 0 4px 30px rgba($accent, 0.5);
+        backdrop-filter: blur(3.0px);
+        -wwebkit-backdrop-filter: blur(3.0px);
+        // height: $size;
+        // width: $size;
+        color: $primary;
+        // align-items: center;
+        // text-align: center;
+        // border-style: dotted;
+        h1 {
+            font-weight: 300;
+            font-family: 'EB Garamond';
+        }
+        li {
+            font-size: 30px;
+        }
     }
     .circle-div {
         animation: MoveUpDown 5s linear infinite;
@@ -166,7 +194,7 @@ a:hover {
             transform: translateY(0);
         }
         50% {
-            transform: translateY(-100px);
+            transform: translateY(100px);
         }
     }
     .circle-div i,
