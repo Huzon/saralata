@@ -402,30 +402,41 @@ i {
 
 #about {
   margin-top: 50px;
+}
+#about .about {
+  margin-top: 50px;
   display: flex;
   justify-content: space-between;
 }
-#about .img {
+#about .about .img {
   width: 30%;
   padding: 0;
 }
-#about .img img {
+#about .about .img img {
   border: #514EC8 solid 3px;
   border-radius: 15px;
   width: 100%;
   object-fit: cover;
 }
-#about .desc {
+#about .about .desc {
   width: 60%;
 }
 
+#team {
+  margin-bottom: 50px;
+}
 #team .our-team {
   display: flex;
   justify-content: space-around;
 }
 #team .our-team .contact-info {
-  border: none;
+  border: solid 3px transparent;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.2), 0px -4px 4px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 500ms, border 500ms;
+}
+#team .our-team .contact-info:hover {
+  border: solid #514EC8 3px;
+  box-shadow: 0px 16px 16px rgba(0, 0, 0, 0.2), 0px -16px 16px rgba(0, 0, 0, 0.1);
 }
 
 .reveal {
