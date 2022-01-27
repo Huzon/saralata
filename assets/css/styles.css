@@ -73,6 +73,38 @@ a:hover {
   text-align: center;
 }
 
+.center {
+  text-align: center;
+}
+
+.start {
+  text-align: start;
+}
+
+i {
+  margin-right: 5px;
+}
+
+.contact-info {
+  margin-top: 30px;
+  padding: 20px 20px;
+  color: #181766;
+  border: solid 3px #514EC8;
+  border-radius: 15px;
+}
+.contact-info h2 {
+  color: #514EC8;
+  margin-bottom: 24px;
+}
+.contact-info .contact-details {
+  margin-top: 20px;
+}
+.contact-info img {
+  border-radius: 15px;
+  width: 200px;
+  height: 200px;
+}
+
 .navbar {
   background-color: #181766;
   height: 80px;
@@ -102,7 +134,30 @@ a:hover {
 }
 .navbar .navbar-info .navbar-links a {
   margin: auto 24px;
+  position: relative;
   font-size: 20px;
+  text-decoration: none;
+  transition: text-decoration 1s;
+}
+.navbar .navbar-info .navbar-links a.link::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 0.1em;
+  background-color: #FFF500;
+  opacity: 0;
+  transition: opacity 300ms, transform 300ms;
+}
+.navbar .navbar-info .navbar-links a.link:hover::after,
+.navbar .navbar-info .navbar-links a.link:focus::after {
+  opacity: 1;
+  transform: translate3d(0, 0.2em, 0);
+}
+.navbar .navbar-info .navbar-links .selected-link {
+  color: #FFF500;
+  font-weight: bold;
 }
 
 .button {
@@ -119,9 +174,14 @@ a:hover {
   box-shadow: 4px 4px 8px 0 rgba(255, 245, 0, 0.4);
 }
 
+.button:hover::after {
+  content: "";
+  width: 0;
+}
+
 #home-title {
   position: relative;
-  background-image: url(../images/background.jpg);
+  background-image: url(../images/sharp-bg.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   height: 800px;
@@ -339,19 +399,33 @@ a:hover {
   color: #FFF500;
   box-shadow: 0px 4px 4px rgba(255, 245, 0, 0.2), 0px -4px 4px rgba(255, 245, 0, 0.1);
 }
-#contact .contact .contact-types .contact-info {
-  margin-top: 30px;
-  padding: 20px 20px;
-  color: #181766;
-  border: solid 3px #514EC8;
+
+#about {
+  margin-top: 50px;
+  display: flex;
+  justify-content: space-between;
+}
+#about .img {
+  width: 30%;
+  padding: 0;
+}
+#about .img img {
+  border: #514EC8 solid 3px;
   border-radius: 15px;
+  width: 100%;
+  object-fit: cover;
 }
-#contact .contact .contact-types .contact-info h2 {
-  color: #514EC8;
-  margin-bottom: 24px;
+#about .desc {
+  width: 60%;
 }
-#contact .contact .contact-types .contact-info .contact-details {
-  margin-top: 20px;
+
+#team .our-team {
+  display: flex;
+  justify-content: space-around;
+}
+#team .our-team .contact-info {
+  border: none;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.2), 0px -4px 4px rgba(0, 0, 0, 0.1);
 }
 
 .reveal {

@@ -77,6 +77,40 @@ a:hover {
     text-align: center;
 }
 
+.center {
+    text-align: center;
+}
+
+.start {
+    text-align: start;
+}
+
+i {
+    //icon settings
+    margin-right: 5px;
+}
+
+.contact-info {
+    margin-top: 30px;
+    padding: 20px 20px;
+    color: $main;
+    border: solid 3px $main-light;
+    border-radius: 15px;
+    h2 {
+        color: $main-light;
+        margin-bottom: 24px;
+    }
+    .contact-details {
+        margin-top: 20px;
+    }
+    img {
+        border-radius: 15px;
+        // border: 3px solid $main;
+        width: 200px;
+        height: 200px;
+    }
+}
+
 // Homepage
 .navbar {
     background-color: $main;
@@ -104,7 +138,30 @@ a:hover {
             display: flex;
             a {
                 margin: auto 24px;
+                position: relative;
                 font-size: 20px;
+                text-decoration: none;
+                transition: text-decoration 1s;
+            }
+            a.link::after {
+                content: '';
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                width: 100%;
+                height: 0.1em;
+                background-color: $accent;
+                opacity: 0;
+                transition: opacity 300ms, transform 300ms;
+            }
+            a.link:hover::after,
+            a.link:focus::after {
+                opacity: 1;
+                transform: translate3d(0, 0.2em, 0);
+            }
+            .selected-link {
+                color: $accent;
+                font-weight: bold;
             }
         }
     }
@@ -124,10 +181,15 @@ a:hover {
     box-shadow: 4px 4px 8px 0 rgba($color: $accent, $alpha: 0.4);
 }
 
+.button:hover::after {
+    content: '';
+    width: 0;
+}
+
 // Home title
 #home-title {
     position: relative;
-    background-image: url(../images/background.jpg);
+    background-image: url(../images/sharp-bg.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     height: 800px;
@@ -364,20 +426,53 @@ a:hover {
                     }
                 }
             }
-            .contact-info {
-                margin-top: 30px;
-                padding: 20px 20px;
-                color: $main;
-                border: solid 3px $main-light;
-                border-radius: 15px;
-                h2 {
-                    color: $main-light;
-                    margin-bottom: 24px;
-                }
-                .contact-details {
-                    margin-top: 20px;
-                }
-            }
+            // .contact-info {
+            //     margin-top: 30px;
+            //     padding: 20px 20px;
+            //     color: $main;
+            //     border: solid 3px $main-light;
+            //     border-radius: 15px;
+            //     h2 {
+            //         color: $main-light;
+            //         margin-bottom: 24px;
+            //     }
+            //     .contact-details {
+            //         margin-top: 20px;
+            //     }
+            // }
+        }
+    }
+}
+
+// about page
+#about {
+    margin-top: 50px;
+    display: flex;
+    justify-content: space-between;
+    .img {
+        width: 30%;
+        padding: 0;
+        // height: 500px;
+        img {
+            // margin: 0;
+            border: $main-light solid 3px;
+            border-radius: 15px;
+            width: 100%;
+            object-fit: cover;
+        }
+    }
+    .desc {
+        width: 60%;
+    }
+}
+
+#team {
+    .our-team {
+        display: flex;
+        justify-content: space-around;
+        .contact-info {
+            border: none;
+            box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.2), 0px -4px 4px rgba(0, 0, 0, 0.1);
         }
     }
 }
