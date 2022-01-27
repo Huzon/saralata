@@ -111,6 +111,11 @@ i {
     }
 }
 
+.sarlata {
+    color: $accent2;
+    font-weight: bold;
+}
+
 // Homepage
 .navbar {
     background-color: $main;
@@ -475,13 +480,37 @@ i {
         display: flex;
         justify-content: space-around;
         .contact-info {
+            position: relative;
             border: solid 3px transparent;
             box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.2), 0px -4px 4px rgba(0, 0, 0, 0.1);
             transition: box-shadow 500ms, border 500ms;
+            .info {
+                opacity: 0;
+                border: solid 3px transparent;
+                border-radius: 15px;
+                position: absolute;
+                top: 0;
+                left: 0;
+                height: 100%;
+                width: 100%;
+                padding: 15px;
+                box-sizing: border-box;
+                text-align: start;
+                background-color: rgba($main, 0.9);
+                color: $primary;
+                visibility: hidden;
+                transform: translateY(100%);
+                transition: opacity 1s, visibility 1s, transform .2s;
+            }
         }
         .contact-info:hover {
             border: solid $main-light 3px;
-            box-shadow: 0px 16px 16px rgba(0, 0, 0, 0.2), 0px -16px 16px rgba(0, 0, 0, 0.1);
+            box-shadow: 0px 16px 16px rgba(0, 0, 0, 0.2), 0px -16px 16px Srgba(0, 0, 0, 0.1);
+            .info {
+                transform: translateY(0);
+                opacity: 1;
+                visibility: visible;
+            }
         }
     }
 }
