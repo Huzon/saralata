@@ -1,6 +1,10 @@
-@import url("https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;700&family=Georama:ital,wght@0,400;0,500;0,700;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;700&family=Georama:ital,wght@0,400;0,500;0,700;1,900&family=Varela+Round&display=swap");
+* {
+  box-sizing: border-box;
+}
+
 body {
-  font-family: "Georama", sans-serif;
+  font-family: "Varela Round", sans-serif;
   font-size: 20px;
   font-style: normal;
   padding: 0;
@@ -111,6 +115,9 @@ i {
 }
 
 .navbar {
+  position: fixed;
+  width: 100%;
+  top: 0;
   background-color: #181766;
   height: 80px;
 }
@@ -136,6 +143,7 @@ i {
 }
 .navbar .navbar-info .navbar-links {
   display: flex;
+  align-items: center;
 }
 .navbar .navbar-info .navbar-links a {
   margin: auto 24px;
@@ -165,6 +173,41 @@ i {
   font-weight: bold;
 }
 
+.dropdown {
+  position: relative;
+  height: fit-content;
+  width: fit-content;
+}
+.dropdown a {
+  margin: 0;
+}
+.dropdown .options {
+  width: 200px;
+  display: none;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.2), 0px -4px 4px rgba(0, 0, 0, 0.1);
+  position: absolute;
+  top: 1.2em;
+  background-color: #ebebeb;
+}
+.dropdown .options a.option {
+  padding: 10px 5px;
+  display: block;
+  color: #181766;
+  font-size: 14px;
+  font-weight: bold;
+  margin: auto;
+  margin-bottom: 5px;
+  background-color: #fff;
+}
+.dropdown .options a.option:hover {
+  background-color: #FF8A00;
+  color: #FFF500;
+}
+
+.dropdown:hover .options {
+  display: block;
+}
+
 .button {
   padding: 10px 8px;
   border: 2px solid #fff;
@@ -182,84 +225,6 @@ i {
 .button:hover::after {
   content: "";
   width: 0;
-}
-
-#home-title {
-  position: relative;
-  background-image: url(../images/sharp-bg.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
-  height: 800px;
-  width: 100%;
-}
-#home-title .home-title-info {
-  width: 80%;
-  height: 100%;
-  margin: auto;
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
-}
-#home-title .square-div {
-  animation: MoveUpDown 5s linear infinite;
-  position: absolute;
-  top: 150px;
-  left: 100px;
-  --p: 30px;
-  padding: var(--p);
-  border: 1px rgba(255, 245, 0, 0.6) solid;
-  background-color: rgba(255, 255, 255, 0.02);
-  box-shadow: 0 4px 30px rgba(255, 245, 0, 0.5);
-  backdrop-filter: blur(3px);
-  -wwebkit-backdrop-filter: blur(3px);
-  color: #fff;
-}
-#home-title .square-div h1 {
-  font-weight: 300;
-  font-family: "EB Garamond";
-}
-#home-title .square-div li {
-  font-size: 30px;
-}
-#home-title .circle-div {
-  animation: MoveUpDown 5s linear infinite;
-  position: absolute;
-  top: 150px;
-  left: 50px;
-  --p: 15px;
-  border-radius: 50%;
-  border: 1px rgba(255, 255, 255, 0.2) solid;
-  background-color: rgba(255, 255, 255, 0.02);
-  box-shadow: 0 4px 30px rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(3px);
-  -wwebkit-backdrop-filter: blur(3px);
-  height: 530px;
-  width: 530px;
-  color: #fff;
-}
-@keyframes MoveUpDown {
-  0%, 100% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(100px);
-  }
-}
-#home-title .circle-div i,
-#home-title .circle-div::before {
-  content: "";
-  float: left;
-  height: 100%;
-  width: 50%;
-  shape-outside: radial-gradient(farthest-side at right, transparent calc(100% - var(--p)), #fff 0);
-}
-#home-title .circle-div i {
-  float: right;
-  shape-outside: radial-gradient(farthest-side at left, transparent calc(100% - var(--p)), #fff 0);
-}
-#home-title .home-title-offer {
-  font-size: 50px;
-  color: #FFF500;
 }
 
 #popular-courses {
@@ -406,7 +371,7 @@ i {
 }
 
 #about {
-  margin-top: 50px;
+  margin-top: 100px;
 }
 #about .about {
   margin-top: 50px;
@@ -425,6 +390,7 @@ i {
 }
 #about .about .desc {
   width: 60%;
+  font-size: 16px;
 }
 
 #team {
@@ -442,6 +408,8 @@ i {
 }
 #team .our-team .contact-info .info {
   opacity: 0;
+  font-size: 16px;
+  text-align: justify;
   border: solid 3px transparent;
   border-radius: 15px;
   position: absolute;
@@ -449,21 +417,19 @@ i {
   left: 0;
   height: 100%;
   width: 100%;
-  padding: 15px;
+  padding: 30px;
   box-sizing: border-box;
   text-align: start;
   background-color: rgba(24, 23, 102, 0.9);
   color: #fff;
   visibility: hidden;
-  transform: translateY(100%);
-  transition: opacity 1s, visibility 1s, transform 0.2s;
+  transition: opacity 1s, visibility 1s;
 }
 #team .our-team .contact-info:hover {
   border: solid #514EC8 3px;
   box-shadow: 0px 16px 16px rgba(0, 0, 0, 0.2), 0px -16px 16px Srgba(0, 0, 0, 0.1);
 }
 #team .our-team .contact-info:hover .info {
-  transform: translateY(0);
   opacity: 1;
   visibility: visible;
 }
@@ -485,6 +451,145 @@ i {
 .active {
   transform: translateX(0);
   opacity: 1;
+}
+
+#home-title {
+  background: radial-gradient(circle, #181766 0%, #514ec8 100%);
+  height: 600px;
+  width: 100%;
+}
+#home-title .circle-div i,
+#home-title .circle-div::before {
+  content: "";
+  float: left;
+  height: 100%;
+  width: 50%;
+  shape-outside: radial-gradient(farthest-side at right, transparent calc(100% - var(--p)), #fff 0);
+}
+#home-title .circle-div i {
+  float: right;
+  shape-outside: radial-gradient(farthest-side at left, transparent calc(100% - var(--p)), #fff 0);
+}
+#home-title .home-title-offer {
+  font-size: 50px;
+  color: #FFF500;
+}
+
+/* Slideshow container */
+.slideshow-container {
+  width: 80%;
+  height: 600px;
+  position: relative;
+  margin: auto;
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+  height: 100%;
+  width: 100%;
+}
+.mySlides img {
+  width: 100%;
+  height: 100%;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dots {
+  position: absolute;
+  bottom: 5px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active-slide,
+.dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 /*# sourceMappingURL=styles.css.map */
