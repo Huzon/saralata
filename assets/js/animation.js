@@ -5,7 +5,8 @@ function reveal() {
     for (var i = 0; i < reveals.length; i++) {
         let windowHeight = window.innerHeight; //height of the window
         let elementTop = reveals[i].getBoundingClientRect().top; //shows distance of element from top of the window
-        let elementVisible = 150;
+        let elementVisible = 10;
+        console.log(elementTop);
         if (elementTop < windowHeight - elementVisible) {
             reveals[i].classList.add("active");
         } else {
@@ -15,7 +16,7 @@ function reveal() {
     for (var i = 0; i < revealsLeft.length; i++) {
         let windowHeight = window.innerHeight; //height of the window
         let elementTop = revealsLeft[i].getBoundingClientRect().top; //shows distance of element from top of the window
-        let elementVisible = 150;
+        let elementVisible = 10;
         if (elementTop < windowHeight - elementVisible) {
             revealsLeft[i].classList.add("active");
         } else {
@@ -25,4 +26,4 @@ function reveal() {
 }
 
 window.addEventListener("scroll", reveal);
-console.log("reveals animation");
+// console.log("reveals animation");
