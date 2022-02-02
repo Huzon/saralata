@@ -7,6 +7,10 @@
     box-sizing: border-box
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     font-family: 'Varela Round', sans-serif;
     font-size: 20px;
@@ -89,6 +93,10 @@ a:hover {
     text-align: start;
 }
 
+.align-end {
+    text-align: end;
+}
+
 i {
     //icon settings
     margin-right: 5px;
@@ -151,9 +159,9 @@ i {
             display: flex;
             align-items: center;
             a {
-                margin: auto 24px;
+                margin: auto 10px;
                 position: relative;
-                font-size: 20px;
+                font-size: 14px;
                 text-decoration: none;
                 transition: text-decoration 1s;
             }
@@ -196,6 +204,8 @@ i {
         position: absolute;
         top: 1.2em;
         background-color: $light;
+        opacity: 0;
+        transition: opacity 2s, display 2s;
         // backcolorcolor: $main;
         a.option {
             padding: 10px 5px;
@@ -211,12 +221,17 @@ i {
             background-color: $accent2;
             color: $accent;
         }
+        a.selected-option {
+            background-color: $accent2;
+            color: $accent;
+        }
     }
 }
 
 .dropdown:hover {
     .options {
         display: block;
+        opacity: 1;
     }
 }
 
@@ -251,32 +266,32 @@ i {
     .courses {
         // width: 100%;
         display: grid;
-        grid-template-columns: auto auto auto auto;
+        grid-template-columns: auto auto auto auto auto auto;
         justify-content: space-between;
         // grid-template-rows: auto auto;
         gap: 4%;
         .courses-box {
             box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.2), 0px -4px 4px rgba(0, 0, 0, 0.1);
             border-radius: 15px;
-            padding: 16px;
+            padding: 8px;
             // box-sizing: border-box;
             .img {
-                height: 200px;
-                border-radius: 10px 10px 0 0;
+                // height: px;
+                // border-radius: 10px 10px 0 0;
                 // width: 280px;
                 img {
                     border-radius: 10px 10px 0 0;
-                    height: 200px;
+                    height: 150px;
                     width: 100%;
                     object-fit: cover;
                 }
-                margin-bottom: 25px;
+                margin-bottom: 15px;
             }
             .info {
                 margin-top: 10px;
                 table {
                     width: 100%;
-                    font-size: 16px;
+                    font-size: 14px;
                     td:first-child {
                         font-weight: bold;
                     }
@@ -286,11 +301,13 @@ i {
                 display: flex;
                 justify-content: space-between;
                 align-items: baseline;
-                margin-top: 40px;
+                margin-top: 30px;
                 h6 {
+                    font-size: 12px;
                     color: $main-light;
                 }
                 a {
+                    font-size: 12px;
                     background-color: $main-light;
                     border-radius: 10px;
                     padding: 5px 20px;
@@ -427,6 +444,7 @@ i {
             }
         }
         .desc {
+            text-align: justify;
             width: 60%;
             font-size: 16px;
         }
@@ -435,44 +453,48 @@ i {
 
 #team {
     margin-bottom: 50px;
+    // height: 100vh;
     .our-team {
-        display: flex;
-        justify-content: space-around;
+        // display: flex;
+        // justify-content: space-around;
+        text-align: start;
         .contact-info {
-            position: relative;
+            display: flex;
             border: solid 3px transparent;
-            box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.2), 0px -4px 4px rgba(0, 0, 0, 0.1);
-            transition: box-shadow 500ms, border 500ms;
-            .info {
-                opacity: 0;
-                font-size: 16px;
-                text-align: justify;
-                border: solid 3px transparent;
-                border-radius: 15px;
-                position: absolute;
-                top: 0;
-                left: 0;
-                height: 100%;
-                width: 100%;
-                padding: 30px;
-                box-sizing: border-box;
-                text-align: start;
-                background-color: rgba($main, 0.9);
-                color: $primary;
-                visibility: hidden;
-                transition: opacity 1s, visibility 1s;
+            // box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.2), 0px -4px 4px rgba(0, 0, 0, 0.1);
+            column-gap: 50px;
+            img {
+                width: 300px;
+                border-radius: 0;
+                // height: 350px;
             }
-        }
-        .contact-info:hover {
-            border: solid $main-light 3px;
-            box-shadow: 0px 16px 16px rgba(0, 0, 0, 0.2), 0px -16px 16px Srgba(0, 0, 0, 0.1);
+            .infos {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+            }
             .info {
                 opacity: 1;
-                visibility: visible;
+                font-size: 16px;
+                border: solid 3px transparent;
+                border-radius: 15px;
+                height: 100%;
+                box-sizing: border-box;
+                text-align: justify;
+                height: fit-content
             }
         }
+        // .contact-info:hover {
+        //     border: solid $main-light 3px;
+        //     box-shadow: 0px 16px 16px rgba(0, 0, 0, 0.2), 0px -16px 16px Srgba(0, 0, 0, 0.1);
+        //     .info {
+        //         opacity: 1;
+        //         visibility: visible;
+        //     }
+        // }
     }
 }
 
 @import 'animation';
 @import 'slideshow';
+@import 'courses';
