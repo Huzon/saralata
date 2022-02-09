@@ -135,7 +135,7 @@ i {
     width: 100%;
     top: 0;
     background-color: $main;
-    height: 80px;
+    height: 10vh;
     .navbar-info {
         display: flex;
         justify-content: space-between;
@@ -144,6 +144,9 @@ i {
         .title {
             font-family: "EB Garamond", serif;
             color: $primary;
+            img {
+                height: 10vh;
+            }
             h1 {
                 font-size: 40px;
                 color: $accent;
@@ -492,6 +495,51 @@ i {
         //         visibility: visible;
         //     }
         // }
+    }
+}
+
+// study abroad section
+#study-abroad {
+    margin-top: 100px;
+    .study-abroad-div {
+        align-items: center;
+        height: 80vh;
+        display: flex;
+        justify-content: center;
+        column-gap: 5%;
+        .img {
+            // width: 30%;
+            height: 50%;
+            // height: 30%;
+            // height: 200px;
+            background-color: #bababa;
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+        .content {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            row-gap: 10px;
+            width: 30%;
+            .content-text {
+                text-align: justify;
+                // margin-top: 20px;
+                font-size: 16px;
+                p {
+                    margin-top: 10px;
+                    font-weight: bold;
+                    color: $main;
+                    text-decoration: underline;
+                }
+                p:hover {
+                    color: $accent;
+                }
+            }
+        }
     }
 }
 

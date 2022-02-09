@@ -129,7 +129,7 @@ i {
   width: 100%;
   top: 0;
   background-color: #203966;
-  height: 80px;
+  height: 10vh;
 }
 .navbar .navbar-info {
   display: flex;
@@ -140,6 +140,9 @@ i {
 .navbar .navbar-info .title {
   font-family: "EB Garamond", serif;
   color: #fff;
+}
+.navbar .navbar-info .title img {
+  height: 10vh;
 }
 .navbar .navbar-info .title h1 {
   font-size: 40px;
@@ -443,6 +446,46 @@ i {
   height: fit-content;
 }
 
+#study-abroad {
+  margin-top: 100px;
+}
+#study-abroad .study-abroad-div {
+  align-items: center;
+  height: 80vh;
+  display: flex;
+  justify-content: center;
+  column-gap: 5%;
+}
+#study-abroad .study-abroad-div .img {
+  height: 50%;
+  background-color: #bababa;
+}
+#study-abroad .study-abroad-div .img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+#study-abroad .study-abroad-div .content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  row-gap: 10px;
+  width: 30%;
+}
+#study-abroad .study-abroad-div .content .content-text {
+  text-align: justify;
+  font-size: 16px;
+}
+#study-abroad .study-abroad-div .content .content-text p {
+  margin-top: 10px;
+  font-weight: bold;
+  color: #203966;
+  text-decoration: underline;
+}
+#study-abroad .study-abroad-div .content .content-text p:hover {
+  color: #FEBF00;
+}
+
 .reveal {
   position: relative;
   transform: translateX(350px);
@@ -464,9 +507,9 @@ i {
 
 #home-title {
   background: radial-gradient(circle, #181766 0%, #514ec8 100%);
-  height: 600px;
+  height: 90vh;
   width: 100%;
-  margin-top: 80px;
+  margin-top: 10vh;
 }
 #home-title .circle-div i,
 #home-title .circle-div::before {
@@ -487,8 +530,8 @@ i {
 
 /* Slideshow container */
 .slideshow-container {
-  width: 80%;
-  height: 600px;
+  width: 100%;
+  height: 90vh;
   position: relative;
   margin: auto;
 }
