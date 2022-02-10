@@ -485,6 +485,20 @@ i {
 #study-abroad .study-abroad-div .content .content-text p:hover {
   color: #FEBF00;
 }
+#study-abroad .study-abroad-div table.country-list {
+  padding: 0px;
+  border: solid #203966 3px;
+}
+#study-abroad .study-abroad-div table.country-list td {
+  border: solid #203966 1px;
+  width: 100px;
+  font-size: 12px;
+  margin: 0px;
+}
+#study-abroad .study-abroad-div table.country-list tr {
+  padding: 0px;
+  margin: 0px;
+}
 
 .reveal {
   position: relative;
@@ -660,7 +674,6 @@ i {
   margin-bottom: 10px;
 }
 .course .course-info {
-  display: flex;
   opacity: 0;
   transform: translateY(-1em);
   justify-content: space-around;

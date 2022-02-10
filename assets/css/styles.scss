@@ -540,6 +540,20 @@ i {
                 }
             }
         }
+        table.country-list {
+            padding: 0px;
+            border: solid $main 3px;
+            td {
+                border: solid $main 1px;
+                width: 100px;
+                font-size: 12px;
+                margin: 0px;
+            }
+            tr {
+                padding: 0px;
+                margin: 0px;
+            }
+        }
     }
 }
 
