@@ -1,60 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="UTF-8" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.71/jquery.csv-0.71.min.js"></script>
-    <script
-      src="https://kit.fontawesome.com/84cd854e91.js"
-      crossorigin="anonymous"
-    ></script>
+    <script src="https://kit.fontawesome.com/84cd854e91.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="./assets/css/styles.css" />
     <title>Courses</title>
-  </head>
+</head>
 
-  <body>
+<body>
     <nav class="navbar">
-      <div class="navbar-info">
-        <div class="title">
-          <img
-            src="./assets/images/Sarlata newsvg.svg"
-            alt=""
-            style="width: 200px; height: 80px"
-          />
-        </div>
-        <div class="navbar-links">
-          <a href="index.html" class="link">Home</a>
-          <a href="./about.html" class="link">About</a>
-          <a href="./about.html" class="link">IT Consultancy Services</a>
+        <div class="navbar-info">
+            <div class="title">
+                <img src="./assets/images/Sarlata newsvg.svg" alt="" style="width: 200px; height: 80px" />
+            </div>
+            <div class="navbar-links">
+                <a href="index.html" class="link">Home</a>
+                <a href="./about.html" class="link">About</a>
+                <a href="./it-consultancy.html" class="link">IT Consultancy Services</a
+          >
           <div class="dropdown">
             <a href="#" class="link selected-link">Training/Courses</a>
-            <div class="options">
-              <a href="computer-aaplication.html" class="option"
-                >Computer Applications</a
+                <div class="options">
+                    <a href="computer-aaplication.html" class="option">Computer Applications</a
               >
               <a href="financial.html" class="option selected-option"
                 >Financial</a
               >
               <a href="management.html" class="option">Management</a>
-              <a href="#" class="option">IBPS</a>
+                    <a href="ibps.html" class="option">IBPS</a>
+                </div>
             </div>
-          </div>
-          <a href="./about.html" class="link">Placement Assistance</a>
-          <a href="./study-abroad.html" class="link">Study Abroad</a>
+            <a href="./placement.html" class="link">Placement Assistance</a>
+            <a href="./study-abroad.html" class="link">Study Abroad</a>
 
-          <a href="#contact" class="link contact"> Contact Us </a>
+            <a href="index.html#contact" class="link contact"> Contact Us </a>
         </div>
-      </div>
+        </div>
     </nav>
     <section id="courses">
-      <!-- <h1 class="section-title">Computer Applications</h1> -->
-      <div class="courses"></div>
+        <!-- <h1 class="section-title">Computer Applications</h1> -->
+        <div class="courses"></div>
     </section>
     <script src="./assets/js/data.js"></script>
     <script>
-      $(document).ready(() => {
-        parse("Financial");
-      });
+        $(document).ready(() => {
+            parse("Financial");
+        });
     </script>
-  </body>
+</body>
+
 </html>

@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;700&family=Georama:ital,wght@0,400;0,500;0,700;1,900&family=Varela+Round&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;700&family=Georama:ital,wght@0,400;0,500;0,700;1,900&family=Noto+Sans:ital@1&family=Varela+Round&display=swap");
 * {
   box-sizing: border-box;
 }
@@ -45,6 +45,11 @@ h1 {
 
 h2 {
   font-size: 30px;
+  font-weight: bold;
+}
+
+h3 {
+  font-size: 25px;
   font-weight: bold;
 }
 
@@ -266,6 +271,7 @@ i {
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.2), 0px -4px 4px rgba(0, 0, 0, 0.1);
   border-radius: 15px;
   padding: 8px;
+  box-sizing: border-box;
 }
 #popular-courses .courses .courses-box .img {
   margin-bottom: 15px;
@@ -390,6 +396,18 @@ i {
   color: #FEBF00;
   box-shadow: 0px 4px 4px rgba(254, 191, 0, 0.2), 0px -4px 4px rgba(254, 191, 0, 0.1);
 }
+#contact .contact .contact-types .contact-form form .social {
+  align-items: center;
+  display: flex;
+  column-gap: 20px;
+}
+#contact .contact .contact-types .contact-form form .social h6 {
+  color: #fff;
+}
+#contact .contact .contact-types .contact-form form .social a {
+  font-size: 40px;
+  margin-right: 10px;
+}
 
 #about {
   margin-top: 100px;
@@ -500,16 +518,93 @@ i {
   margin: 0px;
 }
 
+#ibps {
+  width: 100%;
+  margin-top: 10vh;
+  height: 90vh;
+}
+#ibps .banking-img {
+  position: relative;
+  height: 100%;
+  width: 100%;
+}
+#ibps .banking-img img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+#ibps .banking-img .content {
+  width: 400px;
+  text-align: justify;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 10px;
+  background-color: rgba(235, 235, 235, 0.7);
+  border-radius: 15px;
+  box-sizing: border-box;
+}
+#ibps .banking-img .content h2 {
+  margin-bottom: 10px;
+  color: #203966;
+}
+#ibps .banking-img .content i {
+  font-weight: bold;
+  font-style: italic;
+}
+#ibps .banking-img .content a {
+  display: block;
+  color: #514EC8;
+  font-weight: bold;
+  margin-top: 20px;
+}
+#ibps .banking-img .content a:hover {
+  color: #FEBF00;
+}
+
+#placement {
+  margin-top: 10vh;
+}
+#placement .content {
+  text-align: justify;
+  width: 50%;
+  margin: auto;
+}
+#placement .img-content {
+  width: fit-content;
+  display: flex;
+  margin: 20px auto;
+}
+#placement .img-content img {
+  height: 300px;
+  width: 300px;
+}
+#placement .img-content div {
+  background-color: #514EC8;
+  color: #fff;
+  padding: 10px;
+  text-align: justify;
+  width: 500px;
+}
+#placement .img-content div a {
+  font-weight: bold;
+  color: #0A1B33;
+}
+#placement .img-content div a:hover {
+  color: #FEBF00;
+}
+
 .reveal {
   position: relative;
-  transform: translateX(350px);
+  transform: translateX(50px);
   opacity: 0;
   transition: 2s all ease;
 }
 
 .reveal-left {
   position: relative;
-  transform: translateX(-350px);
+  transform: translateX(-50px);
   opacity: 0;
   transition: 2s all ease;
 }
@@ -540,6 +635,41 @@ i {
 #home-title .home-title-offer {
   font-size: 50px;
   color: #FEBF00;
+}
+#home-title .slide-info {
+  position: absolute;
+  bottom: 0;
+  right: 50%;
+  transform: translateX(50%);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  background-color: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  width: 500px;
+  font-size: 25px;
+  font-weight: bold;
+  padding: 20px;
+  font-family: "Noto Sans";
+  font-style: italic;
+}
+
+.query-btn {
+  margin-top: 30px;
+  border: 3px solid #203966;
+  background-color: #203966;
+  color: #fff;
+  font-family: "Varela Round";
+  font-style: normal;
+  font-size: 20px;
+  padding: 10px;
+  width: fit-content;
+  border-radius: 25px;
+  text-align: center;
+  display: block;
+}
+
+.query-btn:hover {
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
 }
 
 /* Slideshow container */

@@ -1,7 +1,7 @@
 // fonts used
 // GB Garamoud
 // Georama
-@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;700&family=Georama:ital,wght@0,400;0,500;0,700;1,900&family=Varela+Round&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;700&family=Georama:ital,wght@0,400;0,500;0,700;1,900&family=Noto+Sans:ital@1&family=Varela+Round&display=swap');
 @import 'themes';
 * {
     box-sizing: border-box
@@ -47,6 +47,11 @@ h1 {
 
 h2 {
     font-size: 30px;
+    font-weight: bold;
+}
+
+h3 {
+    font-size: 25px;
     font-weight: bold;
 }
 
@@ -277,7 +282,8 @@ i {
             box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.2), 0px -4px 4px rgba(0, 0, 0, 0.1);
             border-radius: 15px;
             padding: 8px;
-            // box-sizing: border-box;
+            // height: 350px;
+            box-sizing: border-box;
             .img {
                 // height: px;
                 // border-radius: 10px 10px 0 0;
@@ -406,6 +412,18 @@ i {
                         border: $accent 3px solid;
                         color: $accent;
                         box-shadow: 0px 4px 4px rgba($accent, 0.2), 0px -4px 4px rgba($accent, 0.1);
+                    }
+                    .social {
+                        align-items: center;
+                        display: flex;
+                        column-gap: 20px;
+                        h6 {
+                            color: #fff;
+                        }
+                        a {
+                            font-size: 40px;
+                            margin-right: 10px;
+                        }
                     }
                 }
             }
@@ -552,6 +570,88 @@ i {
             tr {
                 padding: 0px;
                 margin: 0px;
+            }
+        }
+    }
+}
+
+#ibps {
+    width: 100%;
+    margin-top: 10vh;
+    height: 90vh;
+    .banking-img {
+        position: relative;
+        height: 100%;
+        width: 100%;
+        img {
+            object-fit: cover;
+            width: 100%;
+            height: 100%;
+        }
+        .content {
+            width: 400px;
+            text-align: justify;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            padding: 10px;
+            background-color: rgba($light, 0.7);
+            border-radius: 15px;
+            box-sizing: border-box;
+            h2 {
+                margin-bottom: 10px;
+                color: $main;
+            }
+            i {
+                font-weight: bold;
+                font-style: italic;
+            }
+            a {
+                display: block;
+                color: $main-light;
+                font-weight: bold;
+                margin-top: 20px;
+            }
+            a:hover {
+                color: $accent;
+            }
+        }
+    }
+}
+
+#placement {
+    margin-top: 10vh;
+    .content {
+        text-align: justify;
+        width: 50%;
+        margin: auto;
+    }
+    .img-content {
+        width: fit-content;
+        display: flex;
+        // justify-content: space-between;
+        // column-gap: 30px;
+        margin: 20px auto;
+        // font-size: 16px;
+        img {
+            height: 300px;
+            width: 300px;
+        }
+        div {
+            background-color: $main-light;
+            color: #fff;
+            padding: 10px;
+            text-align: justify;
+            // height: 500px;
+            width: 500px;
+            // width: 70%;
+            a {
+                font-weight: bold;
+                color: $main-dark;
+            }
+            a:hover {
+                color: $accent;
             }
         }
     }

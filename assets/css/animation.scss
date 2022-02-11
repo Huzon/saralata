@@ -1,13 +1,13 @@
 .reveal {
     position: relative;
-    transform: translateX(350px);
+    transform: translateX(50px);
     opacity: 0;
     transition: 2s all ease;
 }
 
 .reveal-left {
     position: relative;
-    transform: translateX(-350px);
+    transform: translateX(-50px);
     opacity: 0;
     transition: 2s all ease;
 }
