@@ -104,6 +104,16 @@
         font-family: 'Noto Sans';
         font-style: italic;
     }
+    #slide1 {
+        right: 10%;
+    }
+    #slide4,
+    #slide2 {
+        bottom: auto;
+        right: 30px;
+        top: 50%;
+        transform: translateY(-50%);
+    }
 }
 
 .query-btn {

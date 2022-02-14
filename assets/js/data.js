@@ -53,7 +53,11 @@ function parse(course) {
 "Business Ethics for Organisations & Professionals","3 Months","","","Management Courses"
 "Personality Development and Grooming","10 Days","","","Management Courses"
 "Interview Skills","10 Days","","","Management Courses"
-"Spoken English","3 Months","","","Management Courses"`;
+"Spoken English","3 Months","","","Management Courses"
+"Diploma in Hardware and Networking","9 Months","","","Hardware and Networking"
+"Cisco Certified Network Associate","6 Months","","","Hardware and Networking"
+"Ethical Hacking","6 Months","","","Hardware and Networking"
+"Microsoft Certified Solution Expert","6 Months","","","Hardware and Networking"`;
     var htmlTxt = "";
     const input = $("#data").val();
     const data = $.csv.toObjects(daata);
@@ -131,10 +135,7 @@ function popularCourses() {
                 <h6 class="title">${val.Name}</h6>
                 <div class="info">
                     <table>
-                        <tr>
-                            <td>Level</td>
-                            <td>${val.Level}</td>
-                        </tr>
+                        
                         <tr>
                             <td>Duration</td>
                             <td>${val.Period}</td>
