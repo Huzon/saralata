@@ -131,6 +131,24 @@ i {
     font-weight: bold;
 }
 
+.flashing {
+    color: orange;
+    animation: blink-animation .4s infinite;
+    -webkit-animation: blink-animation .4s infinite;
+}
+
+@keyframes blink-animation {
+    to {
+        color: yellow;
+    }
+}
+
+@-webkit-keyframes blink-animation {
+    to {
+        color: yellow;
+    }
+}
+
 // Homepage
 .navbar {
     z-index: 1000;
