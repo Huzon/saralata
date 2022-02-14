@@ -9,7 +9,7 @@ html {
 
 body {
   font-family: "Varela Round", sans-serif;
-  font-size: 20px;
+  font-size: 16px;
   font-style: normal;
   padding: 0;
   margin: 0;
@@ -856,6 +856,37 @@ i {
   opacity: 1;
   transform: translateY(0em);
   height: auto;
+}
+
+@media screen and (max-width: 450px) {
+  .section {
+    width: 100%;
+  }
+
+  #home-title {
+    height: 300px;
+    width: 100%;
+    margin-top: 10vh;
+  }
+  #home-title .slideshow-container {
+    width: 100%;
+    height: 300px;
+    position: relative;
+    margin: auto;
+  }
+  #home-title .mySlides {
+    display: none;
+    height: 300px;
+    width: 100%;
+  }
+  #home-title .mySlides img {
+    width: 100%;
+    height: 100%;
+  }
+  #home-title .slide-info {
+    bottom: 0;
+    width: 100%;
+  }
 }
 
 /*# sourceMappingURL=styles.css.map */
