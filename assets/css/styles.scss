@@ -13,7 +13,7 @@ html {
 
 body {
     font-family: 'Varela Round', sans-serif;
-    font-size: 16px;
+    font-size: 14px;
     font-style: normal;
     padding: 0;
     margin: 0;
@@ -23,6 +23,16 @@ body {
 section {
     width: 80%;
     margin: auto;
+}
+
+.normal {
+    font-weight: normal;
+    color: #000;
+}
+
+.card {
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.2), 0px -4px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
 }
 
 h1,
@@ -41,12 +51,12 @@ p {
 }
 
 h1 {
-    font-size: 38px;
+    font-size: 30px;
     font-weight: bold;
 }
 
 h2 {
-    font-size: 30px;
+    font-size: 25px;
     font-weight: bold;
 }
 
@@ -296,8 +306,7 @@ i {
         row-gap: 20px;
         column-gap: 20px;
         .courses-box {
-            box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.2), 0px -4px 4px rgba(0, 0, 0, 0.1);
-            border-radius: 15px;
+            @extend .card;
             padding: 8px;
             box-sizing: border-box;
             .title {
@@ -489,8 +498,6 @@ i {
         }
         .desc {
             text-align: justify;
-            // width: 60%;
-            font-size: 16px;
         }
     }
 }
@@ -519,7 +526,7 @@ i {
             }
             .info {
                 opacity: 1;
-                font-size: 16px;
+                // font-size: 16px;
                 border: solid 3px transparent;
                 border-radius: 15px;
                 height: 100%;
@@ -533,16 +540,19 @@ i {
 
 // study abroad section
 #study-abroad {
+    display: flex;
+    row-gap: 50px;
+    flex-direction: column;
     margin-top: 100px;
     .study-abroad-div {
         align-items: center;
-        height: 50vh;
+        // height: 50vh;
         display: flex;
         justify-content: center;
         column-gap: 5%;
         .img {
-            // width: 30%;
-            height: 50%;
+            height: 300px;
+            width: 400px;
             // height: 30%;
             // height: 200px;
             background-color: #bababa;
@@ -561,7 +571,7 @@ i {
             .content-text {
                 text-align: justify;
                 // margin-top: 20px;
-                font-size: 16px;
+                // font-size: 16px;
                 p {
                     margin-top: 10px;
                     font-weight: bold;
@@ -636,30 +646,30 @@ i {
 }
 
 #placement {
-    margin-top: 10vh;
+    margin-top: 12vh;
     .content {
         text-align: justify;
-        width: 50%;
+        // width: 50%;
         margin: auto;
     }
     .img-content {
         width: fit-content;
         display: flex;
-        // justify-content: space-between;
-        // column-gap: 30px;
-        margin: 20px auto;
-        // font-size: 16px;
+        @extend .card;
+        margin: 50px auto;
         img {
-            height: 300px;
-            width: 300px;
+            border-top-left-radius: 15px;
+            border-bottom-left-radius: 15px;
+            height: 200px;
+            width: 200px;
         }
         div {
-            background-color: $main-light;
-            color: #fff;
+            // background-color: $main-light;
+            // color: #fff;
             padding: 10px;
             text-align: justify;
             // height: 500px;
-            width: 500px;
+            width: 350px;
             // width: 70%;
             a {
                 font-weight: bold;

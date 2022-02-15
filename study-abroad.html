@@ -15,7 +15,7 @@
     <nav class="navbar">
         <div class="navbar-info">
             <div class="title">
-                <img src="./assets/images/Sarlata newsvg.svg" alt="" style="width: 200px; height: 80px" />
+                <img src="./assets/images/Sarlata newsvg.svg" alt="" />
             </div>
             <div class="navbar-links">
                 <a href="index.html" class="link">Home</a>
@@ -25,10 +25,9 @@
           <div class="dropdown">
             <a href="#" class="link">Training/Courses</a>
                 <div class="options">
-                    <a href="computer-aaplication.html" class="option">
-                Computer Application
-              </a>
-                    <a href="financial.html" class="option">Financial</a>
+                    <a href="computer-aaplication.html" onclick="changePage(this)" class="option">Computer Application</a
+              >
+              <a href="financial.html" class="option">Financial</a>
                     <a href="management.html" class="option">Management</a>
                     <a href="ibps.html" class="option">IBPS</a>
                 </div>
@@ -37,7 +36,8 @@
             <a href="./study-abroad.html" class="link selected-link">Study Abroad</a
           >
 
-          <a href="index.html#contact" class="link contact"> Contact Us </a>
+          <a href="#contact" class="link contact"> Contact Us </a>
+            <a href="#popular-courses" class="flashing">Popular Courses</a>
         </div>
         </div>
     </nav>

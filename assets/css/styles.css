@@ -9,7 +9,7 @@ html {
 
 body {
   font-family: "Varela Round", sans-serif;
-  font-size: 16px;
+  font-size: 14px;
   font-style: normal;
   padding: 0;
   margin: 0;
@@ -19,6 +19,16 @@ body {
 section {
   width: 80%;
   margin: auto;
+}
+
+.normal {
+  font-weight: normal;
+  color: #000;
+}
+
+.card, #placement .img-content, #popular-courses .courses .courses-box {
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.2), 0px -4px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 15px;
 }
 
 h1,
@@ -39,12 +49,12 @@ p {
 }
 
 h1 {
-  font-size: 38px;
+  font-size: 30px;
   font-weight: bold;
 }
 
 h2 {
-  font-size: 30px;
+  font-size: 25px;
   font-weight: bold;
 }
 
@@ -284,8 +294,6 @@ i {
   column-gap: 20px;
 }
 #popular-courses .courses .courses-box {
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.2), 0px -4px 4px rgba(0, 0, 0, 0.1);
-  border-radius: 15px;
   padding: 8px;
   box-sizing: border-box;
 }
@@ -452,7 +460,6 @@ i {
 }
 #about .about .desc {
   text-align: justify;
-  font-size: 16px;
 }
 
 #team {
@@ -482,7 +489,6 @@ i {
 }
 #team .our-team .contact-info .info {
   opacity: 1;
-  font-size: 16px;
   border: solid 3px transparent;
   border-radius: 15px;
   height: 100%;
@@ -492,17 +498,20 @@ i {
 }
 
 #study-abroad {
+  display: flex;
+  row-gap: 50px;
+  flex-direction: column;
   margin-top: 100px;
 }
 #study-abroad .study-abroad-div {
   align-items: center;
-  height: 50vh;
   display: flex;
   justify-content: center;
   column-gap: 5%;
 }
 #study-abroad .study-abroad-div .img {
-  height: 50%;
+  height: 300px;
+  width: 400px;
   background-color: #bababa;
 }
 #study-abroad .study-abroad-div .img img {
@@ -519,7 +528,6 @@ i {
 }
 #study-abroad .study-abroad-div .content .content-text {
   text-align: justify;
-  font-size: 16px;
 }
 #study-abroad .study-abroad-div .content .content-text p {
   margin-top: 10px;
@@ -591,28 +599,27 @@ i {
 }
 
 #placement {
-  margin-top: 10vh;
+  margin-top: 12vh;
 }
 #placement .content {
   text-align: justify;
-  width: 50%;
   margin: auto;
 }
 #placement .img-content {
   width: fit-content;
   display: flex;
-  margin: 20px auto;
+  margin: 50px auto;
 }
 #placement .img-content img {
-  height: 300px;
-  width: 300px;
+  border-top-left-radius: 15px;
+  border-bottom-left-radius: 15px;
+  height: 200px;
+  width: 200px;
 }
 #placement .img-content div {
-  background-color: #514EC8;
-  color: #fff;
   padding: 10px;
   text-align: justify;
-  width: 500px;
+  width: 350px;
 }
 #placement .img-content div a {
   font-weight: bold;
