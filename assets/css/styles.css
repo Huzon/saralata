@@ -35,7 +35,6 @@ h1,
 h2,
 h3,
 h4,
-.course .course-title,
 h5,
 #contact .contact .contact-types .contact-form form input[type=submit],
 h6 {
@@ -63,7 +62,7 @@ h3 {
   font-weight: bold;
 }
 
-h4, .course .course-title {
+h4 {
   font-size: 20px;
   font-weight: bold;
 }
@@ -287,6 +286,7 @@ i {
   text-align: center;
 }
 #popular-courses .courses {
+  height: 100%;
   display: grid;
   grid-template-columns: auto auto auto auto auto auto;
   justify-content: space-between;
@@ -340,7 +340,6 @@ i {
 @media screen and (max-width: 1400px) {
   #popular-courses .courses {
     grid-template-columns: auto auto auto;
-    gap: 5%;
   }
 }
 
@@ -866,8 +865,36 @@ i {
 }
 
 @media screen and (max-width: 450px) {
-  .section {
+  .navbar {
+    height: auto;
+  }
+  .navbar .navbar-info {
     width: 100%;
+  }
+  .navbar .navbar-info .title img {
+    height: 80px;
+  }
+  .navbar .navbar-info .navbar-links {
+    display: block;
+    position: relative;
+  }
+  .navbar .navbar-info .navbar-links a {
+    display: none;
+  }
+  .navbar .navbar-info .navbar-links .icon {
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  .navbar .navbar-info .navbar-links .selected-link {
+    color: #FEBF00;
+    font-weight: bold;
+  }
+  .navbar .navbar-info .responsive a {
+    display: block;
+    text-align: left;
   }
 
   #home-title {
@@ -890,9 +917,102 @@ i {
     width: 100%;
     height: 100%;
   }
-  #home-title .slide-info {
-    bottom: 0;
+  #home-title #slide1,
+#home-title #slide2,
+#home-title #slide3,
+#home-title #slide4 {
+    top: auto;
+    left: auto;
+    right: 0px;
+    bottom: 0px;
     width: 100%;
+    transform: none;
+  }
+
+  #popular-courses {
+    width: 95%;
+  }
+  #popular-courses .courses {
+    grid-template-columns: repeat(9, auto);
+    overflow-x: scroll;
+  }
+  #popular-courses .courses .courses-box {
+    width: 200px;
+  }
+  #popular-courses .courses .courses-box .img img {
+    height: 100px;
+  }
+  #popular-courses .courses .courses-box .title {
+    font-size: 14px;
+  }
+  #popular-courses .courses .courses-box .join {
+    margin-top: 10px;
+  }
+
+  #contact {
+    margin-bottom: 50px;
+    width: 100%;
+  }
+  #contact .contact {
+    flex-direction: column;
+    row-gap: 20px;
+  }
+  #contact .contact .map {
+    width: 100%;
+    height: 300px;
+  }
+  #contact .contact .contact-types {
+    width: 100%;
+  }
+  #contact .contact .contact-types .contact-form form .social a {
+    font-size: 20px;
+  }
+
+  #about {
+    width: 90%;
+  }
+  #about .about .desc {
+    font-size: 12px;
+  }
+
+  #team {
+    width: 100%;
+  }
+  #team .our-team {
+    flex-direction: column;
+    row-gap: 20px;
+  }
+  #team .our-team .contact-info {
+    width: 90%;
+    margin: auto;
+  }
+  #team .our-team .contact-info .info {
+    font-size: 12px;
+  }
+
+  #placement .img-content {
+    width: 100%;
+    flex-direction: column;
+  }
+  #placement .img-content img {
+    width: 100%;
+    height: auto;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    border-bottom-left-radius: 0px;
+  }
+  #placement .img-content div {
+    width: 100%;
+  }
+
+  #study-abroad {
+    margin-bottom: 30px;
+  }
+  #study-abroad .study-abroad-div {
+    flex-direction: column;
+  }
+  #study-abroad .study-abroad-div .content {
+    width: auto;
   }
 }
 

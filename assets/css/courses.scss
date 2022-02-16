@@ -10,12 +10,10 @@
     color: #fff;
     transition: background-color .5s;
     .course-title {
-        @extend h4;
+        // @extend h4;
         margin-bottom: 10px;
     }
     .course-info {
-        // display: none;
-        // display: flex;
         opacity: 0;
         transform: translateY(-1em);
         justify-content: space-around;

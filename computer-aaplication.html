@@ -14,17 +14,21 @@
     <nav class="navbar">
         <div class="navbar-info">
             <div class="title">
-                <img src="./assets/images/Sarlata newsvg.svg" alt="" style="width: 200px; height: 80px" />
+                <img src="./assets/images/Sarlata newsvg.svg" alt="" />
             </div>
-            <div class="navbar-links">
+
+            <div id="navbar-links" class="navbar-links">
+                <a class="icon" href="javascript:void(0)" onclick="openMenu()">
+                    <i class="fas fa-bars" aria-hidden="true"></i>
+                </a>
                 <a href="index.html" class="link">Home</a>
                 <a href="./about.html" class="link">About</a>
                 <a href="./it-consultancy.html" class="link">IT Consultancy Services</a
           >
           <div class="dropdown">
-            <a href="#" class="link selected-link">Training/Courses</a>
+            <a href="#" class="link">Training/Courses</a>
                 <div class="options">
-                    <a href="computer-aaplication.html" class="option selected-option">Computer Applications</a
+                    <a href="computer-aaplication.html" class="option selected-option">Computer Application</a
               >
               <a href="financial.html" class="option">Financial</a>
                     <a href="management.html" class="option">Management</a>
@@ -32,9 +36,11 @@
                 </div>
             </div>
             <a href="./placement.html" class="link">Placement Assistance</a>
-            <a href="./study-abroad.html" class="link">Study Abroad</a>
+            <a href="./study-abroad.html" class="link selected-link">Study Abroad</a
+          >
 
-            <a href="index.html#contact" class="link contact"> Contact Us </a>
+          <a href="#contact" class="link contact"> Contact Us </a>
+            <a href="#popular-courses" class="flashing">Popular Courses</a>
         </div>
         </div>
     </nav>
