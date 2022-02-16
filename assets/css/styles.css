@@ -26,7 +26,7 @@ section {
   color: #000;
 }
 
-.card, #placement .img-content, #popular-courses .courses .courses-box {
+.card, #it-consultancy .content, #placement .img-content, #popular-courses .courses .courses-box {
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.2), 0px -4px 4px rgba(0, 0, 0, 0.1);
   border-radius: 15px;
 }
@@ -152,110 +152,79 @@ i {
     color: yellow;
   }
 }
-.navbar {
-  z-index: 1000;
+nav {
   position: fixed;
   width: 100%;
   top: 0;
-  background-color: #203966;
-  height: 10vh;
-}
-.navbar .navbar-info {
-  display: flex;
-  justify-content: space-between;
-  margin: auto;
-  width: 80%;
-}
-.navbar .navbar-info .title {
-  font-family: "EB Garamond", serif;
-  color: #fff;
-}
-.navbar .navbar-info .title img {
-  height: 10vh;
-}
-.navbar .navbar-info .title h1 {
-  font-size: 40px;
-  color: #FEBF00;
-}
-.navbar .navbar-info .title h1 i {
-  color: #EC7D31;
-}
-.navbar .navbar-info .title h3 {
-  font-size: 20px;
-}
-.navbar .navbar-info .navbar-links {
+  z-index: 1000;
   display: flex;
   align-items: center;
+  justify-content: space-between;
+  padding: 0px 10px;
+  background-color: #203966;
+  color: #fff;
 }
-.navbar .navbar-info .navbar-links a {
-  margin: auto 10px;
-  position: relative;
-  font-size: 14px;
+nav a {
   text-decoration: none;
-  transition: text-decoration 1s;
 }
-.navbar .navbar-info .navbar-links a.link::after {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 0.1em;
-  background-color: #FEBF00;
-  opacity: 0;
-  transition: opacity 300ms, transform 300ms;
+nav li {
+  list-style: none;
 }
-.navbar .navbar-info .navbar-links a.link:hover::after,
-.navbar .navbar-info .navbar-links a.link:focus::after {
-  opacity: 1;
-  transform: translate3d(0, 0.2em, 0);
-}
-.navbar .navbar-info .navbar-links .selected-link {
-  color: #FEBF00;
-  font-weight: bold;
-}
-
-.dropdown {
-  position: relative;
-  height: fit-content;
-  width: fit-content;
-}
-.dropdown a {
-  margin: 0;
-}
-.dropdown .options {
+nav .nav-links {
   z-index: 1000;
-  width: 200px;
+}
+nav .nav-links input[type=checkbox] {
   display: none;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.2), 0px -4px 4px rgba(0, 0, 0, 0.1);
-  position: absolute;
-  top: 1.2em;
-  background-color: #ebebeb;
-  opacity: 0;
-  transition: opacity 2s, display 2s;
 }
-.dropdown .options a.option {
-  padding: 10px 5px;
-  display: block;
-  color: #203966;
+nav .nav-links .hamburger {
+  display: none;
+  font-size: 24px;
+  user-select: none;
+}
+nav .nav-links a {
+  color: #fff;
+}
+nav .nav-links .menu {
+  display: flex;
   font-size: 14px;
-  font-weight: bold;
-  margin: auto;
-  margin-bottom: 5px;
-  background-color: #fff;
 }
-.dropdown .options a.option:hover {
-  background-color: #EC7D31;
-  color: #FEBF00;
+nav .nav-links .menu li {
+  padding: 5px 14px;
 }
-.dropdown .options a.selected-option {
-  background-color: #EC7D31;
-  color: #FEBF00;
+nav .nav-links .menu li.selected {
+  background-color: #514EC8;
 }
-
-.dropdown:hover .options {
+nav .nav-links .menu li:hover {
+  background-color: #514EC8;
+  transition: 0.3s ease;
+}
+nav .nav-links .menu .services {
+  position: relative;
+}
+nav .nav-links .menu .services .dropdown {
+  padding: 0;
+  font-size: 14px;
+  background-color: #514EC8;
+  position: absolute;
+  display: none;
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+  left: 0;
+}
+nav .nav-links .menu .services .dropdown li {
+  margin-top: 10px;
+  padding: 0.5em 1em;
+  width: 100%;
+  text-align: center;
+}
+nav .nav-links .menu .services .dropdown li:hover {
+  background-color: #4c9e9e;
+}
+nav .nav-links .menu .services:hover .dropdown {
   display: block;
-  opacity: 1;
+}
+nav .logo img {
+  height: 100px;
 }
 
 .button {
@@ -628,6 +597,72 @@ i {
   color: #FEBF00;
 }
 
+#it-consultancy {
+  width: 100%;
+  margin-top: 120px;
+}
+#it-consultancy img.main {
+  height: 500px;
+  object-fit: cover;
+  margin-bottom: 50px;
+}
+#it-consultancy .contents {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 50px;
+}
+#it-consultancy .content {
+  margin: auto;
+  text-align: center;
+  border-radius: 0;
+  width: fit-content;
+  padding: 10px;
+}
+#it-consultancy .content img {
+  width: 300px;
+  height: 250px;
+  object-fit: cover;
+}
+#it-consultancy .content p {
+  margin: auto;
+  text-align: justify;
+  width: 300px;
+}
+
+#advantages {
+  width: 90%;
+  margin: auto;
+  margin-bottom: 50px;
+  display: flex;
+}
+#advantages img {
+  width: 50%;
+}
+
+#services {
+  margin-bottom: 50px;
+  width: 100%;
+}
+#services .services {
+  display: flex;
+  justify-content: center;
+}
+#services .services .service {
+  margin: auto;
+}
+#services .services .service img {
+  width: 300px;
+  height: 250px;
+  object-fit: cover;
+}
+#services .services .service div {
+  width: 300px;
+  text-align: start;
+}
+
 .reveal {
   position: relative;
   transform: translateX(50px);
@@ -653,18 +688,6 @@ i {
   width: 100%;
   margin-top: 10vh;
 }
-#home-title .circle-div i,
-#home-title .circle-div::before {
-  content: "";
-  float: left;
-  height: 100%;
-  width: 50%;
-  shape-outside: radial-gradient(farthest-side at right, transparent calc(100% - var(--p)), #fff 0);
-}
-#home-title .circle-div i {
-  float: right;
-  shape-outside: radial-gradient(farthest-side at left, transparent calc(100% - var(--p)), #fff 0);
-}
 #home-title .home-title-offer {
   font-size: 50px;
   color: #FEBF00;
@@ -687,6 +710,7 @@ i {
 }
 #home-title #slide1 {
   right: 10%;
+  transform: none;
 }
 #home-title #slide4,
 #home-title #slide2 {
@@ -864,37 +888,91 @@ i {
   height: auto;
 }
 
-@media screen and (max-width: 450px) {
-  .navbar {
-    height: auto;
+@media screen and (max-width: 1400px) {
+  nav .nav-links .menu li {
+    padding: 5px 5px;
   }
-  .navbar .navbar-info {
+
+  #it-consultancy .content img {
+    width: 200px;
+    height: 175px;
+  }
+  #it-consultancy .content p {
+    height: 250px;
+    width: 200px;
+  }
+
+  #services .services {
+    flex-wrap: wrap;
+  }
+  #services .services .service img {
+    width: 200px;
+    height: 175px;
+  }
+  #services .services .service div {
+    height: 250px;
+    width: 200px;
+  }
+}
+@media screen and (max-width: 1000px) {
+  #it-consultancy .contents {
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: 20px;
+  }
+  #it-consultancy .content {
+    width: 90%;
+  }
+  #it-consultancy .content img {
+    max-width: 400px;
     width: 100%;
   }
-  .navbar .navbar-info .title img {
-    height: 80px;
+  #it-consultancy .content p {
+    height: auto;
+    min-height: 150px;
+    max-width: 400px;
+    width: 100%;
   }
-  .navbar .navbar-info .navbar-links {
+
+  #advantages {
+    flex-direction: column;
+  }
+  #advantages img {
+    object-fit: contain;
+    width: 100%;
+  }
+}
+@media screen and (max-width: 768px) {
+  nav .nav-links .hamburger {
     display: block;
-    position: relative;
   }
-  .navbar .navbar-info .navbar-links a {
+  nav .nav-links input[type=checkbox]:checked ~ .menu {
+    display: block;
+  }
+  nav .nav-links .menu {
     display: none;
-  }
-  .navbar .navbar-info .navbar-links .icon {
-    display: block;
     position: absolute;
+    background-color: #203966;
     right: 0;
-    top: 50%;
-    transform: translateY(-50%);
+    left: 0;
+    top: 100px;
+    text-align: center;
+    padding: 16px 0;
   }
-  .navbar .navbar-info .navbar-links .selected-link {
-    color: #FEBF00;
-    font-weight: bold;
+  nav .nav-links .menu li:hover {
+    display: inline-block;
+    background-color: #514EC8;
+    transition: 0.3s ease;
   }
-  .navbar .navbar-info .responsive a {
-    display: block;
-    text-align: left;
+  nav .nav-links .menu li + li {
+    margin-top: 12px;
+  }
+  nav .nav-links .menu .services .dropdown {
+    left: 50%;
+    top: 30px;
+    transform: translateX(35%);
+  }
+  nav .nav-links .menu .services .dropdown li:hover {
+    background-color: #514EC8;
   }
 
   #home-title {
@@ -1013,6 +1091,30 @@ i {
   }
   #study-abroad .study-abroad-div .content {
     width: auto;
+  }
+
+  #it-consultancy .content p {
+    height: auto;
+    min-height: 250px;
+    max-width: 400px;
+    width: 100%;
+  }
+
+  #services .services {
+    flex-wrap: wrap;
+  }
+  #services .services .service {
+    width: 45%;
+    text-align: center;
+  }
+  #services .services .service img {
+    width: 100%;
+    height: 175px;
+  }
+  #services .services .service div {
+    margin: auto;
+    height: 250px;
+    width: 100%;
   }
 }
 

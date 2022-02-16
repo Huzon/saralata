@@ -5,84 +5,6 @@
     height: 90vh;
     width: 100%;
     margin-top: 10vh;
-    // .home-title-info {
-    //     width: 80%;
-    //     height: 100%;
-    //     margin: auto;
-    //     display: flex;
-    //     align-items: center;
-    //     justify-content: flex-end;
-    // }
-    // .square-div {
-    //     // visibility: hidden;
-    //     animation: MoveUpDown 5s linear infinite;
-    //     position: absolute;
-    //     top: 150px;
-    //     left: 100px;
-    //     $size: 530px;
-    //     --p: 30px;
-    //     padding: var(--p);
-    //     // border-radius: 50%;
-    //     border: 1px rgba($accent, 0.6) solid;
-    //     background-color: rgba(#fff, 0.02);
-    //     box-shadow: 0 4px 30px rgba($accent, 0.5);
-    //     backdrop-filter: blur(3.0px);
-    //     -wwebkit-backdrop-filter: blur(3.0px);
-    //     // height: $size;
-    //     // width: $size;
-    //     color: $primary;
-    //     // align-items: center;
-    //     // text-align: center;
-    //     // border-style: dotted;
-    //     h1 {
-    //         font-weight: 300;
-    //         font-family: 'EB Garamond';
-    //     }
-    //     li {
-    //         font-size: 30px;
-    //     }
-    // }
-    // .circle-div {
-    //     animation: MoveUpDown 5s linear infinite;
-    //     position: absolute;
-    //     top: 150px;
-    //     left: 50px;
-    //     $size: 530px;
-    //     --p: 15px;
-    //     border-radius: 50%;
-    //     border: 1px rgba(#fff, 0.2) solid;
-    //     background-color: rgba(#fff, 0.02);
-    //     box-shadow: 0 4px 30px rgba(#fff, 0.1);
-    //     backdrop-filter: blur(3.0px);
-    //     -wwebkit-backdrop-filter: blur(3.0px);
-    //     height: $size;
-    //     width: $size;
-    //     color: $primary;
-    //     // align-items: center;
-    //     // text-align: center;
-    //     // border-style: dotted;
-    // }
-    // @keyframes MoveUpDown {
-    //     0%,
-    //     100% {
-    //         transform: translateY(0);
-    //     }
-    //     50% {
-    //         transform: translateY(100px);
-    //     }
-    // }
-    .circle-div i,
-    .circle-div::before {
-        content: '';
-        float: left;
-        height: 100%;
-        width: 50%;
-        shape-outside: radial-gradient(farthest-side at right, transparent calc(100% - var(--p)), #fff 0);
-    }
-    .circle-div i {
-        float: right;
-        shape-outside: radial-gradient(farthest-side at left, transparent calc(100% - var(--p)), #fff 0);
-    }
     .home-title-offer {
         font-size: 50px;
         color: $accent;
@@ -106,6 +28,7 @@
     }
     #slide1 {
         right: 10%;
+        transform: none;
     }
     #slide4,
     #slide2 {

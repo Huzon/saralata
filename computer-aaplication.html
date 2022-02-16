@@ -1,62 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
+  <head>
     <meta charset="UTF-8" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.71/jquery.csv-0.71.min.js"></script>
-    <script src="https://kit.fontawesome.com/84cd854e91.js" crossorigin="anonymous"></script>
+    <script
+      src="https://kit.fontawesome.com/84cd854e91.js"
+      crossorigin="anonymous"
+    ></script>
     <link rel="stylesheet" href="./assets/css/styles.css" />
     <title>Courses</title>
-</head>
+  </head>
 
-<body>
+  <body>
     <nav class="navbar">
-        <div class="navbar-info">
-            <div class="title">
-                <img src="./assets/images/Sarlata newsvg.svg" alt="" />
-            </div>
+      <div class="logo">
+        <img src="./assets/images/Sarlata newsvg.svg" alt="" />
+      </div>
+      <ul class="nav-links">
+        <input type="checkbox" id="checkbox_toggle" />
+        <label for="checkbox_toggle" class="hamburger">&#9776;</label>
+        <div class="menu">
+          <li><a href="./index.html">Home</a></li>
+          <li><a href="./about.html">About</a></li>
+          <li><a href="./it-consultancy.html">IT Consultancy Services</a></li>
 
-            <div id="navbar-links" class="navbar-links">
-                <a class="icon" href="javascript:void(0)" onclick="openMenu()">
-                    <i class="fas fa-bars" aria-hidden="true"></i>
-                </a>
-                <a href="index.html" class="link">Home</a>
-                <a href="./about.html" class="link">About</a>
-                <a href="./it-consultancy.html" class="link">IT Consultancy Services</a
-          >
-          <div class="dropdown">
-            <a href="#" class="link">Training/Courses</a>
-                <div class="options">
-                    <a href="computer-aaplication.html" class="option selected-option">Computer Application</a
-              >
-              <a href="financial.html" class="option">Financial</a>
-                    <a href="management.html" class="option">Management</a>
-                    <a href="ibps.html" class="option">IBPS</a>
-                </div>
-            </div>
-            <a href="./placement.html" class="link">Placement Assistance</a>
-            <a href="./study-abroad.html" class="link selected-link">Study Abroad</a
-          >
-
-          <a href="#contact" class="link contact"> Contact Us </a>
-            <a href="#popular-courses" class="flashing">Popular Courses</a>
+          <li class="services">
+            <a href="#">Training/Courses</a>
+            <ul class="dropdown">
+              <li>
+                <a href="./computer-aaplication.html">Computer Application</a>
+              </li>
+              <li><a href="./financial.html">Financial</a></li>
+              <li><a href="./management.html">Management</a></li>
+              <li><a href="./ibps.html">IBPS</a></li>
+            </ul>
+          </li>
+          <li><a href="./placement.html">Placement Assistance</a></li>
+          <li><a href="./study-abroad.html">Study Abroad</a></li>
+          <li><a href="./index.html#contact">Contact Us</a></li>
+          <li><a href="./index.html#popular-courses">Popular Courses</a></li>
         </div>
-        </div>
+      </ul>
     </nav>
     <section id="courses">
-        <!-- <h1 class="section-title">Computer Applications</h1> -->
-        <div class="courses"></div>
+      <!-- <h1 class="section-title">Computer Applications</h1> -->
+      <div class="courses"></div>
     </section>
     <script src="./assets/js/data.js"></script>
     <script>
-        $(document).ready(() => {
-            parse("Computer Applications");
-            parse("Website Designing & Programming");
-            parse("Multimedia & Graphic Designing");
-            parse("Hardware and Networking");
-        });
+      $(document).ready(() => {
+        parse("Computer Applications");
+        parse("Website Designing & Programming");
+        parse("Multimedia & Graphic Designing");
+        parse("Hardware and Networking");
+      });
     </script>
-</body>
-
+  </body>
 </html>

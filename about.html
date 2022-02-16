@@ -1,102 +1,138 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script src="https://kit.fontawesome.com/84cd854e91.js" crossorigin="anonymous"></script>
+    <script
+      src="https://kit.fontawesome.com/84cd854e91.js"
+      crossorigin="anonymous"
+    ></script>
 
     <link rel="stylesheet" href="assets/css/styles.css" />
 
     <title>Saralata - About Us</title>
-</head>
+  </head>
 
-<body>
+  <body>
     <nav class="navbar">
-        <div class="navbar-info">
-            <div class="title">
-                <img src="./assets/images/Sarlata newsvg.svg" alt="" />
-            </div>
-            <div class="navbar-links">
-                <a href="index.html" class="link">Home</a>
-                <a href="./about.html" class="link selected-link">About</a>
-                <a href="./it-consultancy.html" class="link">IT Consultancy Services</a
-          >
-          <div class="dropdown">
-            <a href="#" class="link">Training/Courses</a>
-                <div class="options">
-                    <a href="computer-aaplication.html" onclick="changePage(this)" class="option">Computer Application</a
-              >
-              <a href="financial.html" class="option">Financial</a>
-                    <a href="management.html" class="option">Management</a>
-                    <a href="ibps.html" class="option">IBPS</a>
-                </div>
-            </div>
-            <a href="./placement.html" class="link">Placement Assistance</a>
-            <a href="./study-abroad.html" class="link">Study Abroad</a>
+      <div class="logo">
+        <img src="./assets/images/Sarlata newsvg.svg" alt="" />
+      </div>
+      <ul class="nav-links">
+        <input type="checkbox" id="checkbox_toggle" />
+        <label for="checkbox_toggle" class="hamburger">&#9776;</label>
+        <div class="menu">
+          <li><a href="./index.html">Home</a></li>
+          <li class="selected"><a href="./about.html">About</a></li>
+          <li><a href="./it-consultancy.html">IT Consultancy Services</a></li>
 
-            <a href="#contact" class="link contact"> Contact Us </a>
-            <a href="#popular-courses" class="flashing">Popular Courses</a>
+          <li class="services">
+            <a href="#">Training/Courses</a>
+            <ul class="dropdown">
+              <li>
+                <a href="./computer-aaplication.html">Computer Application</a>
+              </li>
+              <li><a href="./financial.html">Financial</a></li>
+              <li><a href="./management.html">Management</a></li>
+              <li><a href="./ibps.html">IBPS</a></li>
+            </ul>
+          </li>
+          <li><a href="./placement.html">Placement Assistance</a></li>
+          <li><a href="./study-abroad.html">Study Abroad</a></li>
+          <li><a href="./index.html#contact">Contact Us</a></li>
+          <li><a href="./index.html#popular-courses">Popular Courses</a></li>
         </div>
-        </div>
+      </ul>
     </nav>
     <section id="about">
-        <h1 class="section-title">About Us</h1>
-        <div class="about">
-            <!-- <div class="img">
+      <h1 class="section-title">About Us</h1>
+      <div class="about">
+        <!-- <div class="img">
                 <img src="assets/images/courses.jpg" alt="" srcset="" />
             </div> -->
-            <div class="desc">
-                <span class="sarlata">SarLata</span> Academy leads through innovation and pursuing excellence. Vision is to empower, inspire and transform lives through quality education Mission is to provide the best flexible learning experience to our
-                students. <br /> Having various field related experiences, we believe a learner’s aim should have possibilities unlimited. Everyone has an opportunity to pursue their aspiration through effective teaching methods leveraging the latest
-                technologies. Our core value is to encourage an independent learning environment that empowers students to embody responsibility and accountability. <br />
-                <span class="sarlata">SarLata</span> dares to dream while setting international educational standards for our students and colleagues. Aim to build bridges of knowledge and push boundaries by producing great talent. The name <span class="sarlata">SarLata</span>                has been inspired from two great ladies Sarala Kanchan and Premalatha Shetty, who have been influential in the early career growth of the founder members.
-            </div>
+        <div class="desc">
+          <span class="sarlata">SarLata</span> Academy leads through innovation
+          and pursuing excellence. Vision is to empower, inspire and transform
+          lives through quality education Mission is to provide the best
+          flexible learning experience to our students. <br />
+          Having various field related experiences, we believe a learner’s aim
+          should have possibilities unlimited. Everyone has an opportunity to
+          pursue their aspiration through effective teaching methods leveraging
+          the latest technologies. Our core value is to encourage an independent
+          learning environment that empowers students to embody responsibility
+          and accountability. <br />
+          <span class="sarlata">SarLata</span> dares to dream while setting
+          international educational standards for our students and colleagues.
+          Aim to build bridges of knowledge and push boundaries by producing
+          great talent. The name <span class="sarlata">SarLata</span> has been
+          inspired from two great ladies Sarala Kanchan and Premalatha Shetty,
+          who have been influential in the early career growth of the founder
+          members.
         </div>
+      </div>
     </section>
     <section id="team">
-        <h1 class="section-title">Founders</h1>
-        <div class="our-team">
-            <div class="contact-info">
-                <div>
-                    <img src="./assets/images/Pradeep.png" alt="" />
-                </div>
-                <div class="infos">
-                    <div>
-                        <h2 class="normal">Mr. Pradeep Shetty</h2>
-                        <h4 class="normal">
-                            <i class="fas fa-user"></i>Founder & Head of IT Programs
-                        </h4>
-                    </div>
-                    <div class="info">
-                        A Master’s in Computer Applications with 30 years of IT experience in various positions in India and MNC’s in United Arab Emirates. Has a proven track record in leading global technical teams to develop innovative technology solutions that increase output
-                        and improve processes. Holds extensive cross platform, project management experience and in-depth knowledge in IT Infrastructure, Applications, Telecom, Education, Insurance and HVAC sector. Expertise at translating sophisticated
-                        technical concepts into business value. Strengths being IT Technology, Business improvement and Training.
-                    </div>
-                </div>
+      <h1 class="section-title">Founders</h1>
+      <div class="our-team">
+        <div class="contact-info">
+          <div>
+            <img src="./assets/images/Pradeep.jpg" alt="" />
+          </div>
+          <div class="infos">
+            <div>
+              <h2 class="normal">Mr. Pradeep Shetty</h2>
+              <h4 class="normal">
+                <i class="fas fa-user"></i>Founder & Head of IT Programs
+              </h4>
             </div>
-            <div class="contact-info">
-                <div>
-                    <img src="./assets/images/DivyaRani.jpg" alt="" />
-                </div>
-                <div class="infos">
-                    <div>
-                        <h2 class="normal">Mrs. Divya Rani</h2>
-                        <h4 class="normal">
-                            <i class="fas fa-user"></i>Co-Founder and Head of Management Programs
-                        </h4>
-                    </div>
-                    <div class="info">
-                        A PhD scholar at O P Jindal University and holder of a Master’s degree in European Studies from Manipal & Hochshule Bremen University Germany. She is also a visiting professor for top Management Universities. She brings great talent and motivation to
-                        the team and has held various talk shows in the field of education. She also holds a Pharmaceutical diploma and has held various positions in MNC companies in United Arab Emirates. With a past entrepreneurial leadership experience
-                        her dream of starting her business and empowering people came true with the launch of SarLata Academy. She is a Skill India certified trainier. Strengths being Entrepreneurship, Management and Training.
-                    </div>
-                </div>
+            <div class="info">
+              A Master’s in Computer Applications with 30 years of IT experience
+              in various positions in India and MNC’s in United Arab Emirates.
+              Has a proven track record in leading global technical teams to
+              develop innovative technology solutions that increase output and
+              improve processes. Holds extensive cross platform, project
+              management experience and in-depth knowledge in IT Infrastructure,
+              Applications, Telecom, Education, Insurance and HVAC sector.
+              Expertise at translating sophisticated technical concepts into
+              business value. Strengths being IT Technology, Business
+              improvement and Training.
             </div>
+          </div>
         </div>
+        <div class="contact-info">
+          <div>
+            <img src="./assets/images/DivyaRani.jpg" alt="" />
+          </div>
+          <div class="infos">
+            <div>
+              <h2 class="normal">Mrs. Divya Rani</h2>
+              <h4 class="normal">
+                <i class="fas fa-user"></i>Co-Founder and Head of Management
+                Programs
+              </h4>
+            </div>
+            <div class="info">
+              A PhD scholar at O P Jindal University and holder of a Master’s
+              degree in European Studies from Manipal & Hochshule Bremen
+              University Germany. She is also a visiting professor for top
+              Management Universities. She brings great talent and motivation to
+              the team and has held various talk shows in the field of
+              education. She also holds a Pharmaceutical diploma and has held
+              various positions in MNC companies in United Arab Emirates. With a
+              past entrepreneurial leadership experience her dream of starting
+              her business and empowering people came true with the launch of
+              SarLata Academy. She is a Skill India certified trainier.
+              Strengths being Entrepreneurship, Management and Training.
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
-    <script src="https://code.jquery.com/jquery-3.6.0.slim.min.js" integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI=" crossorigin="anonymous"></script>
-</body>
-
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.slim.min.js"
+      integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI="
+      crossorigin="anonymous"
+    ></script>
+  </body>
 </html>
