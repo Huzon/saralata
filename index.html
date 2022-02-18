@@ -146,7 +146,7 @@
     </section>
     <section id="serviceBadges">
         <div class="badge" onClick="redirect('ibps.html')">
-            <img src="./assets/images/badges/IBPS – Banking Exam Preparation.jpg" alt="IBPS" srcset="" />
+            <img src="./assets/images/badges/IBPS.jpg" alt="IBPS" srcset="" />
             <div class="text-badge">IBPS</div>
         </div>
         <div class="badge" onClick="redirect('it-consultancy.html')">
@@ -210,10 +210,10 @@
                     <form action="#" method="post">
                         <input type="text" name="name" placeholder="Name" id="" />
                         <input type="email" name="email" placeholder="email" id="" />
-                        <input type="text" name="subject" placeholder="Subject" id="" />
-                        <textarea name="message" placeholder="Message" id="" cols="30" rows="10"></textarea>
+                        <input type="text" name="subject" placeholder="Inquiry about?" id="sub" />
+                        <textarea name="message" placeholder="Message" id="msg" cols="30" rows="10"></textarea>
                         <div class="social">
-                            <input type="submit" value="Send Message" />
+                            <input type="submit" onclick="sendMail()" value="Send Message" />
                             <div class="social-btns">
                                 <h6>Or follow us:</h6>
                                 <a href="http://"><i class="fab fa-facebook"></i></a>
@@ -238,6 +238,14 @@
 
         function redirect(value) {
             window.location.href = value;
+        }
+
+        function sendMail() {
+            location.href =
+                "mailto:web@sarlata.com?subject=Inquiry from Website: " +
+                document.getElementById("sub").value +
+                "&body=" +
+                document.getElementById("msg").value;
         }
     </script>
 </body>
