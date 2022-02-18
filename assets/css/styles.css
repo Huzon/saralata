@@ -288,6 +288,7 @@ nav.navbar .logo img {
   text-align: center;
 }
 #popular-courses .courses {
+  padding: 10px 0px;
   height: 100%;
   display: grid;
   grid-template-columns: auto auto auto auto auto auto;

@@ -420,6 +420,7 @@ nav.navbar {
         text-align: center;
     }
     .courses {
+        padding: 10px 0px;
         height: 100%;
         display: grid;
         grid-template-columns: auto auto auto auto auto auto;
@@ -434,9 +435,6 @@ nav.navbar {
                 height: 60px;
             }
             .img {
-                // height: px;
-                // border-radius: 10px 10px 0 0;
-                // width: 280px;
                 img {
                     border-radius: 10px 10px 0 0;
                     height: 150px;
