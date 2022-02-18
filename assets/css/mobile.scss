@@ -1,5 +1,5 @@
 @media screen and (max-width: 1400px) {
-    nav {
+    nav.navbar {
         .nav-links {
             .menu {
                 li {
@@ -68,7 +68,7 @@
 }
 
 @media screen and (max-width: 768px) {
-    nav {
+    nav.navbar {
         .nav-links {
             .hamburger {
                 display: block;
@@ -106,6 +106,9 @@
             }
         }
     }
+    #serviceBadges {
+        display: flex;
+    }
     #home-title {
         height: 300px;
         width: 100%;
@@ -124,7 +127,14 @@
             img {
                 width: 100%;
                 height: 100%;
+                object-fit: cover;
             }
+        }
+        .slide-info {
+            font-size: 14px;
+            padding: 5px;
+            box-shadow: none;
+            backdrop-filter: blur(5px);
         }
         #slide1,
         #slide2,
@@ -137,6 +147,12 @@
             width: 100%;
             transform: none;
         }
+    }
+    .query-btn {
+        margin-top: 10px;
+        font-size: 14px;
+        font-weight: normal;
+        padding: 7px;
     }
     #popular-courses {
         width: 95%;
@@ -227,7 +243,11 @@
         .study-abroad-div {
             flex-direction: column;
             .content {
-                width: auto // .content-text {}
+                width: auto; // .content-text {}
+                .content-title {
+                    margin: 10px 0;
+                    text-align: center;
+                }
             }
         }
     }
@@ -256,6 +276,16 @@
                     height: 250px;
                     width: 100%;
                 }
+            }
+        }
+    }
+    #ibps {
+        .banking-img {
+            width: 100%;
+            height: 100vh;
+            margin: 0;
+            .content {
+                width: 90%;
             }
         }
     }

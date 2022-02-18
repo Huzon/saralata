@@ -8,7 +8,7 @@
 }
 
 html {
-    scroll-behavior: smooth;
+    // scroll-behavior: smooth;
 }
 
 body {
@@ -95,7 +95,7 @@ a:hover {
 
 // common
 .section-title {
-    margin-bottom: 30px;
+    margin-bottom: 20px;
     color: $main;
     text-align: center;
 }
@@ -136,9 +136,16 @@ i {
     }
 }
 
+b.imp {
+    font-family: 'EB Garamond', sans-serif;
+    font-size: 18px;
+}
+
 .sarlata {
     color: $accent2;
     font-weight: bold;
+    font-size: 18px;
+    font-family: 'EB Garamond', sans-serif;
 }
 
 .flashing {
@@ -266,7 +273,7 @@ i {
 //         opacity: 1;
 //     }
 // }
-nav {
+nav.navbar {
     position: fixed;
     width: 100%;
     top: 0;
@@ -334,7 +341,12 @@ nav {
                         text-align: center;
                     }
                     li:hover {
-                        background-color: #4c9e9e;
+                        background-color: $accent2;
+                        color: #000;
+                        a {
+                            color: $accent;
+                            font-weight: bold;
+                        }
                     }
                 }
             }
@@ -372,8 +384,34 @@ nav {
 }
 
 // Home title
+#serviceBadges {
+    display: none;
+    margin-top: 50px;
+    justify-content: space-between;
+    .badge {
+        text-align: center;
+        // @extend .card;
+        // border-radius: 50%;
+        // padding: 5px;
+        img {
+            @extend .card;
+            border-radius: 50%;
+            height: 50px;
+            width: 50px;
+            object-fit: cover;
+            border: solid 5px #fff;
+        }
+        .text-badge {
+            text-align: center;
+            width: 80px;
+            font-size: 8px;
+            // color: #000;
+        }
+    }
+}
+
 #popular-courses {
-    margin: 100px auto;
+    margin: 50px auto;
     // margin-bottom: 50px;
     h1 {
         margin-bottom: 30px;
@@ -561,9 +599,9 @@ nav {
 
 // about page
 #about {
-    margin-top: 100px;
+    margin-top: 130px;
     .about {
-        margin-top: 50px;
+        // margin-top: 50px;
         display: flex;
         justify-content: space-between;
         .img {
@@ -600,6 +638,7 @@ nav {
             img {
                 width: 300px;
                 border-radius: 0;
+                object-fit: contain;
             }
             .infos {
                 display: flex;
@@ -625,16 +664,21 @@ nav {
     display: flex;
     row-gap: 50px;
     flex-direction: column;
-    margin-top: 100px;
+    margin-top: 130px;
     .study-abroad-div {
+        margin: auto;
         align-items: center;
-        // height: 50vh;
+        padding: 20px;
+        width: fit-content;
+        @extend .card;
+        border-radius: 0;
         display: flex;
         justify-content: center;
         column-gap: 5%;
         .img {
             height: 300px;
-            width: 400px;
+            max-width: 400px;
+            width: 100%;
             // height: 30%;
             // height: 200px;
             background-color: #bababa;
@@ -645,15 +689,11 @@ nav {
             }
         }
         .content {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
             row-gap: 10px;
-            width: 30%;
+            max-width: 500px;
+            width: 100%;
             .content-text {
                 text-align: justify;
-                // margin-top: 20px;
-                // font-size: 16px;
                 p {
                     margin-top: 10px;
                     font-weight: bold;
@@ -728,9 +768,9 @@ nav {
 }
 
 #placement {
-    margin-top: 12vh;
+    margin-top: 130px;
     .content {
-        text-align: justify;
+        text-align: center;
         // width: 50%;
         margin: auto;
     }
@@ -744,6 +784,7 @@ nav {
             border-bottom-left-radius: 15px;
             height: 200px;
             width: 200px;
+            object-fit: cover;
         }
         div {
             // background-color: $main-light;
@@ -812,6 +853,7 @@ nav {
     display: flex;
     img {
         width: 50%;
+        object-fit: contain;
     }
 }
 

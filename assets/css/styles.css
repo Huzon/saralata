@@ -3,10 +3,6 @@
   box-sizing: border-box;
 }
 
-html {
-  scroll-behavior: smooth;
-}
-
 body {
   font-family: "Varela Round", sans-serif;
   font-size: 14px;
@@ -26,7 +22,7 @@ section {
   color: #000;
 }
 
-.card, #it-consultancy .content, #placement .img-content, #popular-courses .courses .courses-box {
+.card, #it-consultancy .content, #placement .img-content, #study-abroad .study-abroad-div, #popular-courses .courses .courses-box, #serviceBadges .badge img {
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.2), 0px -4px 4px rgba(0, 0, 0, 0.1);
   border-radius: 15px;
 }
@@ -91,7 +87,7 @@ a:hover {
 }
 
 .section-title {
-  margin-bottom: 30px;
+  margin-bottom: 20px;
   color: #203966;
   text-align: center;
 }
@@ -131,9 +127,16 @@ i {
   height: 200px;
 }
 
+b.imp {
+  font-family: "EB Garamond", sans-serif;
+  font-size: 18px;
+}
+
 .sarlata {
   color: #EC7D31;
   font-weight: bold;
+  font-size: 18px;
+  font-family: "EB Garamond", sans-serif;
 }
 
 .flashing {
@@ -152,7 +155,7 @@ i {
     color: yellow;
   }
 }
-nav {
+nav.navbar {
   position: fixed;
   width: 100%;
   top: 0;
@@ -164,44 +167,44 @@ nav {
   background-color: #203966;
   color: #fff;
 }
-nav a {
+nav.navbar a {
   text-decoration: none;
 }
-nav li {
+nav.navbar li {
   list-style: none;
 }
-nav .nav-links {
+nav.navbar .nav-links {
   z-index: 1000;
 }
-nav .nav-links input[type=checkbox] {
+nav.navbar .nav-links input[type=checkbox] {
   display: none;
 }
-nav .nav-links .hamburger {
+nav.navbar .nav-links .hamburger {
   display: none;
   font-size: 24px;
   user-select: none;
 }
-nav .nav-links a {
+nav.navbar .nav-links a {
   color: #fff;
 }
-nav .nav-links .menu {
+nav.navbar .nav-links .menu {
   display: flex;
   font-size: 14px;
 }
-nav .nav-links .menu li {
+nav.navbar .nav-links .menu li {
   padding: 5px 14px;
 }
-nav .nav-links .menu li.selected {
+nav.navbar .nav-links .menu li.selected {
   background-color: #514EC8;
 }
-nav .nav-links .menu li:hover {
+nav.navbar .nav-links .menu li:hover {
   background-color: #514EC8;
   transition: 0.3s ease;
 }
-nav .nav-links .menu .services {
+nav.navbar .nav-links .menu .services {
   position: relative;
 }
-nav .nav-links .menu .services .dropdown {
+nav.navbar .nav-links .menu .services .dropdown {
   padding: 0;
   font-size: 14px;
   background-color: #514EC8;
@@ -211,19 +214,24 @@ nav .nav-links .menu .services .dropdown {
   border-bottom-right-radius: 8px;
   left: 0;
 }
-nav .nav-links .menu .services .dropdown li {
+nav.navbar .nav-links .menu .services .dropdown li {
   margin-top: 10px;
   padding: 0.5em 1em;
   width: 100%;
   text-align: center;
 }
-nav .nav-links .menu .services .dropdown li:hover {
-  background-color: #4c9e9e;
+nav.navbar .nav-links .menu .services .dropdown li:hover {
+  background-color: #EC7D31;
+  color: #000;
 }
-nav .nav-links .menu .services:hover .dropdown {
+nav.navbar .nav-links .menu .services .dropdown li:hover a {
+  color: #FEBF00;
+  font-weight: bold;
+}
+nav.navbar .nav-links .menu .services:hover .dropdown {
   display: block;
 }
-nav .logo img {
+nav.navbar .logo img {
   height: 100px;
 }
 
@@ -246,8 +254,29 @@ nav .logo img {
   width: 0;
 }
 
+#serviceBadges {
+  display: none;
+  margin-top: 50px;
+  justify-content: space-between;
+}
+#serviceBadges .badge {
+  text-align: center;
+}
+#serviceBadges .badge img {
+  border-radius: 50%;
+  height: 50px;
+  width: 50px;
+  object-fit: cover;
+  border: solid 5px #fff;
+}
+#serviceBadges .badge .text-badge {
+  text-align: center;
+  width: 80px;
+  font-size: 8px;
+}
+
 #popular-courses {
-  margin: 100px auto;
+  margin: 50px auto;
 }
 #popular-courses h1 {
   margin-bottom: 30px;
@@ -409,10 +438,9 @@ nav .logo img {
 }
 
 #about {
-  margin-top: 100px;
+  margin-top: 130px;
 }
 #about .about {
-  margin-top: 50px;
   display: flex;
   justify-content: space-between;
 }
@@ -449,6 +477,7 @@ nav .logo img {
 #team .our-team .contact-info img {
   width: 300px;
   border-radius: 0;
+  object-fit: contain;
 }
 #team .our-team .contact-info .infos {
   display: flex;
@@ -469,17 +498,22 @@ nav .logo img {
   display: flex;
   row-gap: 50px;
   flex-direction: column;
-  margin-top: 100px;
+  margin-top: 130px;
 }
 #study-abroad .study-abroad-div {
+  margin: auto;
   align-items: center;
+  padding: 20px;
+  width: fit-content;
+  border-radius: 0;
   display: flex;
   justify-content: center;
   column-gap: 5%;
 }
 #study-abroad .study-abroad-div .img {
   height: 300px;
-  width: 400px;
+  max-width: 400px;
+  width: 100%;
   background-color: #bababa;
 }
 #study-abroad .study-abroad-div .img img {
@@ -488,11 +522,9 @@ nav .logo img {
   object-fit: cover;
 }
 #study-abroad .study-abroad-div .content {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
   row-gap: 10px;
-  width: 30%;
+  max-width: 500px;
+  width: 100%;
 }
 #study-abroad .study-abroad-div .content .content-text {
   text-align: justify;
@@ -567,10 +599,10 @@ nav .logo img {
 }
 
 #placement {
-  margin-top: 12vh;
+  margin-top: 130px;
 }
 #placement .content {
-  text-align: justify;
+  text-align: center;
   margin: auto;
 }
 #placement .img-content {
@@ -583,6 +615,7 @@ nav .logo img {
   border-bottom-left-radius: 15px;
   height: 200px;
   width: 200px;
+  object-fit: cover;
 }
 #placement .img-content div {
   padding: 10px;
@@ -640,6 +673,7 @@ nav .logo img {
 }
 #advantages img {
   width: 50%;
+  object-fit: contain;
 }
 
 #services {
@@ -694,14 +728,12 @@ nav .logo img {
 }
 #home-title .slide-info {
   position: absolute;
-  bottom: 0;
-  right: 50%;
-  transform: translateX(50%);
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
   background-color: rgba(255, 255, 255, 0.2);
   backdrop-filter: blur(5px);
   -webkit-backdrop-filter: blur(5px);
-  width: 500px;
+  max-width: 500px;
+  width: 100%;
   font-size: 25px;
   font-weight: bold;
   padding: 20px;
@@ -710,7 +742,13 @@ nav .logo img {
 }
 #home-title #slide1 {
   right: 10%;
+  bottom: 0;
   transform: none;
+}
+#home-title #slide3 {
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
 }
 #home-title #slide4,
 #home-title #slide2 {
@@ -856,7 +894,7 @@ nav .logo img {
   }
 }
 #courses {
-  margin-top: 100px;
+  margin-top: 130px;
 }
 
 .course {
@@ -889,7 +927,7 @@ nav .logo img {
 }
 
 @media screen and (max-width: 1400px) {
-  nav .nav-links .menu li {
+  nav.navbar .nav-links .menu li {
     padding: 5px 5px;
   }
 
@@ -942,13 +980,13 @@ nav .logo img {
   }
 }
 @media screen and (max-width: 768px) {
-  nav .nav-links .hamburger {
+  nav.navbar .nav-links .hamburger {
     display: block;
   }
-  nav .nav-links input[type=checkbox]:checked ~ .menu {
+  nav.navbar .nav-links input[type=checkbox]:checked ~ .menu {
     display: block;
   }
-  nav .nav-links .menu {
+  nav.navbar .nav-links .menu {
     display: none;
     position: absolute;
     background-color: #203966;
@@ -958,21 +996,25 @@ nav .logo img {
     text-align: center;
     padding: 16px 0;
   }
-  nav .nav-links .menu li:hover {
+  nav.navbar .nav-links .menu li:hover {
     display: inline-block;
     background-color: #514EC8;
     transition: 0.3s ease;
   }
-  nav .nav-links .menu li + li {
+  nav.navbar .nav-links .menu li + li {
     margin-top: 12px;
   }
-  nav .nav-links .menu .services .dropdown {
+  nav.navbar .nav-links .menu .services .dropdown {
     left: 50%;
     top: 30px;
     transform: translateX(35%);
   }
-  nav .nav-links .menu .services .dropdown li:hover {
+  nav.navbar .nav-links .menu .services .dropdown li:hover {
     background-color: #514EC8;
+  }
+
+  #serviceBadges {
+    display: flex;
   }
 
   #home-title {
@@ -994,6 +1036,13 @@ nav .logo img {
   #home-title .mySlides img {
     width: 100%;
     height: 100%;
+    object-fit: cover;
+  }
+  #home-title .slide-info {
+    font-size: 14px;
+    padding: 5px;
+    box-shadow: none;
+    backdrop-filter: blur(5px);
   }
   #home-title #slide1,
 #home-title #slide2,
@@ -1005,6 +1054,13 @@ nav .logo img {
     bottom: 0px;
     width: 100%;
     transform: none;
+  }
+
+  .query-btn {
+    margin-top: 10px;
+    font-size: 14px;
+    font-weight: normal;
+    padding: 7px;
   }
 
   #popular-courses {
@@ -1092,6 +1148,10 @@ nav .logo img {
   #study-abroad .study-abroad-div .content {
     width: auto;
   }
+  #study-abroad .study-abroad-div .content .content-title {
+    margin: 10px 0;
+    text-align: center;
+  }
 
   #it-consultancy .content p {
     height: auto;
@@ -1115,6 +1175,15 @@ nav .logo img {
     margin: auto;
     height: 250px;
     width: 100%;
+  }
+
+  #ibps .banking-img {
+    width: 100%;
+    height: 100vh;
+    margin: 0;
+  }
+  #ibps .banking-img .content {
+    width: 90%;
   }
 }
 

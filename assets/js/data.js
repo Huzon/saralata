@@ -48,7 +48,7 @@ function parse(course) {
 "Negotiation Skills","3 Months","","","Management Courses"
 "HR Training","3 Months","","","Management Courses"
 "Logistics and Supply Chain Management","3 Months","","","Management Courses"
-"Managerial Skills","3 Months","","","Management Courses"
+"Leadership & Managerial skills for workplace success","3 Months","","","Management Courses"
 "Office Management","3 Months","","","Management Courses"
 "Business Ethics for Organisations & Professionals","3 Months","","","Management Courses"
 "Personality Development and Grooming","10 Days","","","Management Courses"
@@ -104,24 +104,24 @@ function parse(course) {
 
 function popularCourses() {
     let dataString = `"Name","Period","Target","Level","Course"
-"Advanced Diploma in Computer Teacher Training (ADCTT)","12 Months","12","3","Computer Applications"
-"Advance Diploma in Computer Studies (ADCS)","12 Months","12","3","Computer Applications"
-"Advance Diploma in Computer Application (ADCA)","12 Months","10","3","Computer Applications"
+"Advanced Diploma in Hardware and Networking","","","","Hardware and Networking"
+"Cisco Certified Network Associate","","","","Hardware and Networking"
+"Digital Advertising Design & Marketing (DADM)","12 Months","12","1","Multimedia & Graphic Designing"
 "Professional Diploma in Banking & Accounting (PDBA)","12 Months","12","4","Financial"
 "Advance Diploma in Computer Programming & Accounting (ADCPA)","12 Months","12","4","Financial"
 "Certificate in Computer Application with Tally (CCA‐T)","4 months","10","4","Financial"
-"Advanced Diploma in Hardware and Networking","","","","Hardware and Networking"
-"Cisco Certified Network Associate","","","","Hardware and Networking"
-"Ethical Hacking","","","","Hardware and Networking"
-"Logistics and Supply Chain Management","3 Months","","","Management Courses"
-"Business Ethics for Organisations & Professionals","3 Months","","","Management Courses"
-"Personality Development and Grooming","10 Days","","","Management Courses"
-"Digital Advertising Design & Marketing (DADM)","12 Months","12","1","Multimedia & Graphic Designing"
-"Diploma in Graphic & Animation (DGA)","6 Months","12","1","Multimedia & Graphic Designing"
 "Advanced Program in Digital Media & Design (APDMD)","9 Months","12","1","Multimedia & Graphic Designing"
 "Diploma in Professional Web Designing (DPWD)","12 Months","12","2","Website Designing & Programming"
+"Ethical Hacking","","","","Hardware and Networking"
+"Logistics and Supply Chain Management","3 Months","","","Management Courses"
+"Personality Development and Grooming","10 Days","","","Management Courses"
+"Advance Diploma in Computer Application (ADCA)","12 Months","10","3","Computer Applications"
+"Advanced Diploma in Computer Teacher Training (ADCTT)","12 Months","12","3","Computer Applications"
+"Advance Diploma in Computer Studies (ADCS)","12 Months","12","3","Computer Applications"
+"Diploma in Graphic & Animation (DGA)","6 Months","12","1","Multimedia & Graphic Designing"
 "Diploma in Digital Marketing (DDM)","6 Months","12","2","Website Designing & Programming"
-"Certificate in Cyber Security (CCS)","6 Months","12","2","Website Designing & Programming"`;
+"Certificate in Cyber Security (CCS)","6 Months","12","2","Website Designing & Programming"
+"Business Ethics for Organisations & Professionals","3 Months","","","Management Courses"`;
 
     let htmlTxt = "";
     const data = $.csv.toObjects(dataString);
