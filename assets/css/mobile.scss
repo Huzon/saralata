@@ -239,6 +239,7 @@
         }
     }
     #study-abroad {
+        width: calc(100% - 10px);
         margin-bottom: 30px;
         .study-abroad-div {
             flex-direction: column;
@@ -281,11 +282,9 @@
     }
     #ibps {
         .banking-img {
-            width: 100%;
-            height: 100vh;
-            margin: 0;
-            .content {
-                width: 90%;
+            flex-direction: column;
+            img {
+                width: 100%;
             }
         }
     }

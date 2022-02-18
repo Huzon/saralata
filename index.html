@@ -75,22 +75,22 @@
     </nav>
     <section id="home-title">
         <div class="slideshow-container">
-            <!-- <div class="mySlides fade">
+            <div class="mySlides fade">
                 <div class="slide-info" id="slide1">
                     Enquire for Today’s Business and Individual Challenges with Digital Transformation
                     <a href="#contact" class="query-btn">Query Now</a>
                 </div>
                 <img src="assets/images/Homepage/5.jpg" style="width: 100%" />
-            </div> -->
+            </div>
 
-            <!-- <div class="mySlides fade">
+            <div class="mySlides fade">
                 <div class="slide-info" id="slide2">
                     Digital Age – Call or Email for a free Business IT consultancy
                     <a href="#contact" class="query-btn">Query Now</a>
                 </div>
 
                 <img src="assets/images/Homepage/6.jpg" style="width: 100%" />
-            </div> -->
+            </div>
 
             <div class="mySlides fade">
                 <div class="slide-info" id="slide3">
@@ -100,13 +100,13 @@
                 <img src="assets/images/Homepage/2.jpg" style="width: 100%" />
             </div>
 
-            <!-- <div class="mySlides fade">
+            <div class="mySlides fade">
                 <div class="slide-info" id="slide4">
                     Financial growth challenges simplified
                     <a href="#contact" class="query-btn">Query Now</a>
                 </div>
                 <img src="assets/images/Homepage/8.jpg" style="width: 100%" />
-            </div> -->
+            </div>
 
             <!-- Next and previous buttons -->
             <!-- <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
@@ -145,27 +145,27 @@
         </div> -->
     </section>
     <section id="serviceBadges">
-        <div class="badge">
+        <div class="badge" onClick="redirect('ibps.html')">
             <img src="./assets/images/badges/IBPS – Banking Exam Preparation.jpg" alt="IBPS" srcset="" />
             <div class="text-badge">IBPS</div>
         </div>
-        <div class="badge">
+        <div class="badge" onClick="redirect('it-consultancy.html')">
             <img src="./assets/images/badges/IT Consultancy.jpg" alt="IT Consultancy" srcset="" />
             <div class="text-badge">IT Consultancy</div>
         </div>
-        <div class="badge">
+        <div class="badge" onClick="redirect('computer-aaplication.html')">
             <img src="./assets/images/badges/IT Training Courses.jpg" alt="IT Traning Courses" srcset="" />
             <div class="text-badge">IT Training Courses</div>
         </div>
-        <div class="badge">
+        <div class="badge" onClick="redirect('management.html')">
             <img src="./assets/images/badges/Management Training Courses.jpg" alt="Management Training Courses" srcset="" />
             <div class="text-badge">Management Training Courses</div>
         </div>
-        <div class="badge">
+        <div class="badge" onClick="redirect('placement.html')">
             <img src="./assets/images/badges/Placement Assistance.jpg" alt="Placement Assistance" srcset="" />
             <div class="text-badge">Placement Assistance</div>
         </div>
-        <div class="badge">
+        <div class="badge" onClick="redirect('study-abroad.html')">
             <img src="./assets/images/badges/Study Abroad.jpg" alt="Study Abroad" srcset="" />
             <div class="text-badge">Study Abroad</div>
         </div>
@@ -235,6 +235,10 @@
     <script src="./assets/js/slideshow.js"></script>
     <script>
         popularCourses();
+
+        function redirect(value) {
+            window.location.href = value;
+        }
     </script>
 </body>
 
