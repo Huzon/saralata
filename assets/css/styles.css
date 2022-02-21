@@ -160,6 +160,7 @@ nav.navbar {
   width: 100%;
   top: 0;
   z-index: 1000;
+  display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 0px 10px;

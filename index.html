@@ -27,7 +27,7 @@
 </head>
 
 <body>
-    <nav class="navbar show">
+    <nav class="navbar">
         <div class="logo">
             <img src="./assets/images/Logo Regular.png" alt="" />
         </div>
@@ -240,7 +240,17 @@
                 document.getElementById("msg").value;
         }
 
-        // scroll
+        // scroll pffset added to show section title on scroll
+        $(window).on("hashchange", offsetAnchor);
+
+        function offsetAnchor() {
+            if (location.hash.length !== 0) {
+                window.scrollTo(window.scrollX, window.scrollY - 100);
+                // window.scrollTo(window.scrollX, window.scrollY - 100);
+            }
+        }
+
+        window.setTimeout(offsetAnchor, 1);
     </script>
 </body>
 
