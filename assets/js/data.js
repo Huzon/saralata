@@ -113,9 +113,6 @@ function popularCourses() {
 
     let htmlTxt = "";
     const data = $.csv.toObjects(dataString);
-    // $("#result").empty();
-    // $("#result").html(JSON.stringify(dataString, null, 3));
-
     data.forEach((val) => {
         htmlTxt += `<div class="courses-box">
                 <div class="img"><img src="./assets/images/popular-courses/${val.Name}.jpg"></img>
