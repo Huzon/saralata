@@ -76,18 +76,6 @@ function parse(course) {
             htmlTxt += val.Name;
             htmlTxt += "</div>";
             htmlTxt += "<div class='course-info'>";
-            //   htmlTxt += "<div>";
-            //   htmlTxt += "Level : ";
-            //   for (let index = 0; index < val.Level; index++) {
-            //     htmlTxt += "<i class='fas fa-star'></i>";
-            //   }
-            //   htmlTxt += "</div>";
-
-            //   // val.Level +
-            //   htmlTxt += "<div>";
-
-            //   htmlTxt += " Target : " + val.Target;
-            //   htmlTxt += "</div>";
 
             htmlTxt += "<div>";
             htmlTxt += " Period : " + val.Period + " <i class='fas fa-clock'></i>";
@@ -144,7 +132,7 @@ function popularCourses() {
                 </div>
                 <div class="join">
                     <h6>Interested? </h6>
-                    <a href="#" class="button-join">Enquire</a>
+                    <a href="https://sarlata.in#contact" class="button-join">Enquire</a>
                 </div>
             </div>`;
     });
