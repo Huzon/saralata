@@ -132,7 +132,7 @@ function popularCourses() {
                 </div>
                 <div class="join">
                     <h6>Interested? </h6>
-                    <a href="https://sarlata.in#contact" class="button-join">Enquire</a>
+                    <a href="#contact" class="button-join">Enquire</a>
                 </div>
             </div>`;
     });
