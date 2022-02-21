@@ -27,15 +27,15 @@
 </head>
 
 <body>
-    <nav class="navbar">
+    <nav class="navbar show">
         <div class="logo">
-            <img src="./assets/images/Sarlata newsvg.svg" alt="" />
+            <img src="./assets/images/Logo Regular.png" alt="" />
         </div>
         <ul class="nav-links">
             <input type="checkbox" id="checkbox_toggle" />
             <label for="checkbox_toggle" class="hamburger">&#9776;</label>
             <div class="menu">
-                <li class="selected"><a href="./index.html">Home</a></li>
+                <li class="selected"><a href="./">Home</a></li>
                 <li><a href="./about.html">About</a></li>
                 <li><a href="./it-consultancy.html">IT Consultancy Services</a></li>
 
@@ -52,8 +52,10 @@
                 </li>
                 <li><a href="./placement.html">Placement Assistance</a></li>
                 <li><a href="./study-abroad.html">Study Abroad</a></li>
-                <li><a href="#contact">Contact Us</a></li>
-                <li><a href="#popular-courses">Popular Courses</a></li>
+                <li><a href="#contact" onclick="uncheck()">Contact Us</a></li>
+                <li>
+                    <a href="#popular-courses" onclick="uncheck()">Popular Courses</a>
+                </li>
             </div>
         </ul>
     </nav>
@@ -129,10 +131,6 @@
         </div> -->
     </section>
     <section id="serviceBadges">
-        <div class="badge" onClick="redirect('ibps.html')">
-            <img src="./assets/images/badges/IBPS.jpg" alt="IBPS" srcset="" />
-            <div class="text-badge">IBPS</div>
-        </div>
         <div class="badge" onClick="redirect('it-consultancy.html')">
             <img src="./assets/images/badges/IT Consultancy.jpg" alt="IT Consultancy" srcset="" />
             <div class="text-badge">IT Consultancy</div>
@@ -152,6 +150,10 @@
         <div class="badge" onClick="redirect('study-abroad.html')">
             <img src="./assets/images/badges/Study Abroad.jpg" alt="Study Abroad" srcset="" />
             <div class="text-badge">Study Abroad</div>
+        </div>
+        <div class="badge" onClick="redirect('ibps.html')">
+            <img src="./assets/images/badges/IBPS.jpg" alt="IBPS" srcset="" />
+            <div class="text-badge">IBPS</div>
         </div>
     </section>
     <section id="popular-courses">
@@ -219,18 +221,26 @@
     <script src="./assets/js/slideshow.js"></script>
     <script>
         popularCourses();
-
+        //to redirect badges
         function redirect(value) {
             window.location.href = value;
         }
 
+        //to close the hamburger menu in mobile view
+        function uncheck() {
+            $("#checkbox_toggle").removeAttr("checked");
+        }
+
+        //to open mail client
         function sendMail() {
             location.href =
-                "mailto:web@sarlata.com?subject=Inquiry from Website: " +
+                "mailto:web@sarlata.in?subject=Inquiry from Website: " +
                 document.getElementById("sub").value +
                 "&body=" +
                 document.getElementById("msg").value;
         }
+
+        // scroll
     </script>
 </body>
 

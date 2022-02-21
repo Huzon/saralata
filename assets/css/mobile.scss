@@ -38,6 +38,10 @@
 }
 
 @media screen and (max-width: 1000px) {
+    .sarlata,
+    b.imp {
+        font-size: 15px;
+    }
     #it-consultancy {
         .contents {
             grid-template-columns: repeat(2, 1fr);
@@ -69,6 +73,11 @@
 
 @media screen and (max-width: 768px) {
     nav.navbar {
+        .logo {
+            img {
+                height: 60px;
+            }
+        }
         .nav-links {
             .hamburger {
                 display: block;
@@ -82,7 +91,7 @@
                 background-color: $main;
                 right: 0;
                 left: 0;
-                top: 100px;
+                top: 60px;
                 text-align: center;
                 padding: 16px 0;
                 li:hover {

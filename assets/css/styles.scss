@@ -278,7 +278,7 @@ nav.navbar {
     width: 100%;
     top: 0;
     z-index: 1000;
-    display: flex;
+    // display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 0px 10px;
@@ -359,7 +359,7 @@ nav.navbar {
     }
     .logo {
         img {
-            height: 100px;
+            height: 80px;
         }
     }
 }
@@ -383,6 +383,16 @@ nav.navbar {
     width: 0;
 }
 
+.show {
+    transition: all 500ms;
+    display: flex;
+}
+
+.hide {
+    transition: all 500ms;
+    display: none;
+}
+
 // Home title
 #serviceBadges {
     display: none;
@@ -397,15 +407,15 @@ nav.navbar {
         img {
             @extend .card;
             border-radius: 50%;
-            height: 50px;
-            width: 50px;
+            height: 80px;
+            width: 80px;
             object-fit: cover;
             border: solid 5px #fff;
         }
         .text-badge {
             text-align: center;
-            width: 80px;
-            font-size: 8px;
+            width: 100px;
+            font-size: 12px;
             // color: #000;
         }
     }
@@ -704,18 +714,16 @@ nav.navbar {
                 }
             }
         }
-        table.country-list {
-            padding: 0px;
-            border: solid $main 3px;
-            td {
-                border: solid $main 1px;
-                width: 100px;
-                font-size: 12px;
-                margin: 0px;
-            }
-            tr {
-                padding: 0px;
-                margin: 0px;
+        .country-list {
+            // padding: 3px;
+            // border: solid $main 3px;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            font-size: 12px;
+            gap: 2px;
+            div {
+                text-align: center;
+                border: 1px solid $main;
             }
         }
     }
@@ -823,6 +831,7 @@ nav.navbar {
     }
     .content {
         margin: auto;
+        height: 100%;
         text-align: center;
         @extend .card;
         border-radius: 0;
