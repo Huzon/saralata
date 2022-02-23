@@ -107,8 +107,9 @@
                         left: 50%;
                         top: 30px;
                         transform: translateX(35%);
+                        background-color: $main-light;
                         li:hover {
-                            background-color: $main-light;
+                            background-color: $accent2;
                         }
                     }
                 }
