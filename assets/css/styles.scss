@@ -482,9 +482,25 @@ nav.navbar {
                         h6 {
                             color: #fff;
                         }
-                        a {
-                            font-size: 40px;
-                            margin-right: 10px;
+                        .social-btns {
+                            .btns {
+                                display: flex;
+                                flex-wrap: wrap;
+                                align-items: center;
+                            }
+                            a {
+                                font-size: 40px;
+                                margin-right: 10px;
+                            }
+                            a.img-link {
+                                display: inline-block;
+                                height: 40px;
+                                width: 40px;
+                                img {
+                                    height: 40px;
+                                    width: 40px;
+                                }
+                            }
                         }
                     }
                 }
