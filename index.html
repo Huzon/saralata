@@ -204,13 +204,13 @@
                 </div>
                 <div class="contact-form">
                     <h2>Leave a message</h2>
-                    <form action="#" method="post">
-                        <input type="text" name="name" placeholder="Name" id="" />
-                        <input type="email" name="email" placeholder="email" id="" />
-                        <input type="text" name="subject" placeholder="Inquiry about?" id="sub" />
-                        <textarea name="message" placeholder="Message" id="msg" cols="30" rows="10"></textarea>
+                    <form action="" onsubmit="sendMail()" method="post">
+                        <input type="text" id="#name" name="name" placeholder="Name" id="" />
+                        <!-- <input type="email" name="email" placeholder="email" id="" /> -->
+                        <input type="text" name="subject" placeholder="Inquiry about?" id="sub" required />
+                        <textarea name="message" placeholder="Message" id="msg" cols="30" rows="10" required></textarea>
                         <div class="social">
-                            <input type="submit" onclick="sendMail()" value="Send Message" />
+                            <input type="submit" value="Send Message" />
                             <div class="social-btns">
                                 <h6>Or follow us:</h6>
                                 <div class="btns">
@@ -260,11 +260,19 @@
 
         //to open mail client
         function sendMail() {
+            const name = $("#name").val();
+            let body;
+            if (name) {
+                body = `Hey, ${name} here,\n ${$("#msg").val()}`;
+            } else {
+                body = `hey,\n ${$("#msg").val()}`;
+            }
+            // if ()
             location.href =
                 "mailto:web@sarlata.in?subject=Inquiry from Website: " +
-                document.getElementById("sub").value +
+                $("#sub").val() +
                 "&body=" +
-                document.getElementById("msg").value;
+                body;
         }
 
         // scroll pffset added to show section title on scroll
