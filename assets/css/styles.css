@@ -672,6 +672,26 @@ nav.navbar .logo img {
   color: #FEBF00;
 }
 
+.career-link {
+  text-align: center;
+}
+
+.link-btn {
+  padding: 5px 10px;
+  animation: color-change 1s infinite;
+}
+
+@keyframes color-change {
+  0% {
+    background-color: red;
+  }
+  50% {
+    background-color: blue;
+  }
+  100% {
+    background-color: red;
+  }
+}
 #it-consultancy {
   width: 100%;
   margin-top: 120px;
