@@ -535,7 +535,13 @@ nav.navbar {
     }
   }
 }
-
+a.contact {
+  color: $main-dark;
+  display: inline-block;
+}
+a.contact:hover {
+  color: $accent;
+}
 // about page
 #about {
   margin-top: 100px;

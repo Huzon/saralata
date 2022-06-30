@@ -485,6 +485,15 @@ nav.navbar .logo img {
   width: 40px;
 }
 
+a.contact {
+  color: #0A1B33;
+  display: inline-block;
+}
+
+a.contact:hover {
+  color: #FEBF00;
+}
+
 #about {
   margin-top: 100px;
 }
