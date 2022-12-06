@@ -783,17 +783,26 @@ a.contact:hover {
   gap: 20px;
 }
 .careers div {
-  width: fit-content;
   box-shadow: 0px 8px 8px rgba(0, 0, 0, 0.3), 0px -8px 8px rgba(0, 0, 0, 0.2);
   cursor: pointer;
 }
 .careers div img {
   width: 100%;
+  height: 400px;
 }
 .careers div:hover {
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.2), 0px -4px 4px rgba(0, 0, 0, 0.1);
 }
 
+@media screen and (max-width: 900px) {
+  .careers {
+    grid-template-columns: auto;
+  }
+  .careers img {
+    width: 100%;
+    height: auto;
+  }
+}
 .reveal {
   position: relative;
   transform: translateX(50px);
@@ -814,7 +823,7 @@ a.contact:hover {
 }
 
 #home-title {
-  background: radial-gradient(circle, #181766 0%, #514ec8 100%);
+  background: radial-gradient(circle, rgb(24, 23, 102) 0%, rgb(81, 78, 200) 100%);
   height: 90vh;
   width: 100%;
   margin-top: 80px;
@@ -1027,7 +1036,6 @@ a.contact:hover {
   nav.navbar .nav-links .menu li {
     padding: 5px 5px;
   }
-
   #it-consultancy .content img {
     width: 200px;
     height: 175px;
@@ -1036,7 +1044,6 @@ a.contact:hover {
     height: 250px;
     width: 200px;
   }
-
   #services .services {
     flex-wrap: wrap;
   }
@@ -1054,7 +1061,6 @@ a.contact:hover {
 b.imp {
     font-size: 15px;
   }
-
   #it-consultancy .contents {
     grid-template-columns: repeat(2, 1fr);
     row-gap: 20px;
@@ -1072,7 +1078,6 @@ b.imp {
     max-width: 400px;
     width: 100%;
   }
-
   #advantages {
     flex-direction: column;
   }
@@ -1120,11 +1125,9 @@ b.imp {
   nav.navbar .nav-links .menu .services .dropdown li:hover {
     background-color: #EC7D31;
   }
-
   #serviceBadges {
     display: flex;
   }
-
   #home-title {
     height: 300px;
     width: 100%;
@@ -1163,14 +1166,12 @@ b.imp {
     width: 100%;
     transform: none;
   }
-
   .query-btn {
     margin-top: 10px;
     font-size: 14px;
     font-weight: normal;
     padding: 7px;
   }
-
   #popular-courses {
     width: 95%;
   }
@@ -1190,7 +1191,6 @@ b.imp {
   #popular-courses .courses .courses-box .join {
     margin-top: 10px;
   }
-
   #contact {
     margin-bottom: 50px;
     width: 100%;
@@ -1209,7 +1209,6 @@ b.imp {
   #contact .contact .contact-types .contact-form form .social .social-btns a {
     font-size: 20px;
   }
-
   #koo {
     width: 20px;
     height: 20px;
@@ -1217,14 +1216,12 @@ b.imp {
     line-height: 20px;
     border-radius: 2px;
   }
-
   #about {
     width: 90%;
   }
   #about .about .desc {
     font-size: 12px;
   }
-
   #team {
     width: 100%;
   }
@@ -1239,7 +1236,6 @@ b.imp {
   #team .our-team .contact-info .info {
     font-size: 12px;
   }
-
   #placement .img-content {
     width: 100%;
     flex-direction: column;
@@ -1254,7 +1250,6 @@ b.imp {
   #placement .img-content div {
     width: 100%;
   }
-
   #study-abroad {
     width: calc(100% - 10px);
     margin-bottom: 30px;
@@ -1269,14 +1264,12 @@ b.imp {
     margin: 10px 0;
     text-align: center;
   }
-
   #it-consultancy .content p {
     height: auto;
     min-height: 250px;
     max-width: 400px;
     width: 100%;
   }
-
   #services .services {
     flex-wrap: wrap;
   }
@@ -1293,7 +1286,6 @@ b.imp {
     height: 250px;
     width: 100%;
   }
-
   #ibps .banking-img {
     flex-direction: column;
   }
